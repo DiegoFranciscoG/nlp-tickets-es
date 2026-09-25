@@ -42,6 +42,7 @@ train = [
     "transformers==5.17.0",
 ]
 dev = [
+    "argon2-cffi==25.1.0",
     "httpx2==2.13.1",
     "matplotlib==3.11.2",
     "mypy==2.3.1",
