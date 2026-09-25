@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from collections.abc import Iterator
 from functools import lru_cache
 
 from sqlalchemy import Engine, create_engine
@@ -22,16 +21,3 @@ def get_engine() -> Engine:
 @lru_cache(maxsize=1)
 def get_session_factory() -> sessionmaker[Session]:
     return sessionmaker(bind=get_engine(), expire_on_commit=False)
-
-
-def get_session() -> Iterator[Session]:
-    """Dependencia de FastAPI: una sesión por petición con commit/rollback explícito."""
-    session = get_session_factory()()
-    try:
-        yield session
-        session.commit()
-    except Exception:
-        session.rollback()
-        raise
-    finally:
-        session.close()

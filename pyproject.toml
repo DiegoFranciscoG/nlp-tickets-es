@@ -76,12 +76,11 @@ src = ["src", "tests"]
 
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "N", "UP", "B", "S", "SIM", "RUF", "PL", "PT"]
-ignore = ["PLR0913", "PLR2004"]
+ignore = ["PLR0913", "PLR2004", "SIM905"]
 
 [tool.ruff.lint.per-file-ignores]
 "tests/**" = ["S101", "S105", "S106", "PLR2004"]
 "migrations/**" = ["N999"]
-"src/nlp_tickets/anonymization/names.py" = ["SIM905"]
 
 [tool.mypy]
 python_version = "3.12"
@@ -91,7 +90,7 @@ mypy_path = "src"
 plugins = ["pydantic.mypy"]
 
 [[tool.mypy.overrides]]
-module = ["onnxruntime.*", "pgvector.*", "sklearn.*", "joblib.*", "mlflow.*", "matplotlib.*", "transformers.*", "sentence_transformers.*", "huggingface_hub.*", "testcontainers.*", "torch.*", "pandas.*", "pyarrow.*"]
+module = ["onnxruntime.*", "pgvector.*", "sklearn.*", "joblib.*", "mlflow.*", "matplotlib.*", "transformers.*", "sentence_transformers.*", "huggingface_hub.*", "testcontainers.*", "torch.*", "pandas.*", "pyarrow.*", "scipy.*"]
 ignore_missing_imports = true
 
 [tool.pytest.ini_options]

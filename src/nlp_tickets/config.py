@@ -35,7 +35,6 @@ class Settings(BaseSettings):
     model_url: str = ""
     model_sha256: str = ""
     confidence_threshold_override: float | None = Field(default=None, ge=0.0, le=1.0)
-    catalog_dir: Path | None = None
 
     @field_validator("confidence_threshold_override", mode="before")
     @classmethod
