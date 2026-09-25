@@ -49,11 +49,11 @@ services:
     environment:
       API_BASE_URL: http://api:8000
       DEMO_API_KEY: ${DEMO_API_KEY:?Define DEMO_API_KEY en .env (una de API_KEYS_CLIENT)}
-      DEMO_REVIEWER_KEY: ${DEMO_REVIEWER_KEY:-}
+      DEMO_REVIEWER_KEY: ${DEMO_REVIEWER_KEY:?Define DEMO_REVIEWER_KEY en .env (una de API_KEYS_REVIEWER)}
       DEMO_USER: ${DEMO_USER:-demo}
       DEMO_PASSWORD_HASH: ${DEMO_PASSWORD_HASH:?Define DEMO_PASSWORD_HASH (python demo/hash_password.py)}
       REVIEWER_USER: ${REVIEWER_USER:-revisor}
-      REVIEWER_PASSWORD_HASH: ${REVIEWER_PASSWORD_HASH:-}
+      REVIEWER_PASSWORD_HASH: ${REVIEWER_PASSWORD_HASH:?Define REVIEWER_PASSWORD_HASH (python demo/hash_password.py)}
     ports:
       - "8501:8501"
     depends_on:
