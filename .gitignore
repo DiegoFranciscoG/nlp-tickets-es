@@ -1,0 +1,46 @@
+# ---- Secretos y entorno
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+secrets.toml
+# ---- Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+*.egg-info/
+build/
+dist/
+.ipynb_checkpoints/
+# ---- Datos y modelos (se descargan o generan con scripts; nunca en git)
+data/raw/
+data/processed/
+artifacts/
+mlruns/
+mlartifacts/
+mlflow.db
+*.onnx
+*.safetensors
+*.bin
+*.pt
+*.joblib
+# ---- Logs
+*.log
+# ---- IDE / SO
+.idea/
+*.iml
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+Thumbs.db
