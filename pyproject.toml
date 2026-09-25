@@ -1,0 +1,119 @@
+[project]
+name = "nlp-tickets-es"
+version = "0.1.0"
+description = "Clasificación y enrutamiento de tickets de soporte en español con revisión humana y búsqueda semántica"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Diego Francisco Granda Zhingre" }]
+requires-python = ">=3.12,<3.13"
+# Dependencias de ejecución de la API: sin PyTorch (la inferencia usa ONNX Runtime).
+dependencies = [
+    "alembic==1.20.0",
+    "fastapi==0.141.1",
+    "numpy==2.5.3",
+    "onnxruntime==1.30.0",
+    "pgvector==0.5.0",
+    "psycopg[binary]==3.3.6",
+    "pydantic==2.13.5",
+    "pydantic-settings==2.15.0",
+    "sqlalchemy==2.1.1",
+    "tokenizers==0.23.2",
+    "uvicorn==0.54.0",
+]
+
+[project.scripts]
+nlp-tickets = "nlp_tickets.cli:main"
+
+[dependency-groups]
+# Entrenamiento y evaluación (CPU o Colab)
+train = [
+    "huggingface-hub==1.33.0",
+    "joblib==1.6.0",
+    "matplotlib==3.11.2",
+    "mlflow==3.16.1",
+    "onnx==1.23.0",
+    "onnxscript==0.7.2",
+    "pandas==3.0.6",
+    "pyarrow==25.0.1",
+    "scikit-learn==1.9.1",
+    "sentence-transformers==6.1.0",
+    "torch==2.14.0",
+    "transformers==5.17.0",
+]
+dev = [
+    "httpx==0.28.1",
+    "mypy==2.3.1",
+    "pandas==3.0.6",
+    "pre-commit==4.6.2",
+    "pyarrow==25.0.1",
+    "pytest==9.1.1",
+    "pytest-cov==7.1.0",
+    "ruff==0.16.9",
+    "scikit-learn==1.9.1",
+    "testcontainers==4.15.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.19,<0.13"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "nlp_tickets"
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cpu" }]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "S", "SIM", "RUF", "PL", "PT"]
+ignore = ["PLR0913", "PLR2004"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101", "S105", "S106", "PLR2004"]
+"migrations/**" = ["N999"]
+"src/nlp_tickets/anonymization/names.py" = ["SIM905"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+packages = ["nlp_tickets"]
+mypy_path = "src"
+plugins = ["pydantic.mypy"]
+
+[[tool.mypy.overrides]]
+module = ["onnxruntime.*", "pgvector.*", "sklearn.*", "joblib.*", "mlflow.*", "matplotlib.*", "transformers.*", "sentence_transformers.*", "huggingface_hub.*", "testcontainers.*", "torch.*", "pandas.*", "pyarrow.*"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
+markers = [
+    "integration: requiere Docker (Testcontainers + PostgreSQL/pgvector)",
+    "model: requiere el modelo entrenado en artifacts/model",
+]
+
+[tool.coverage.run]
+source = ["nlp_tickets"]
+branch = true
+# Scripts de entrenamiento pesado (requieren PyTorch/datasets completos) se validan por ejecución, no por pytest.
+omit = [
+    "src/nlp_tickets/ml/train_transformer.py",
+    "src/nlp_tickets/ml/export_onnx.py",
+    "src/nlp_tickets/ml/pipeline.py",
+    "src/nlp_tickets/cli.py",
+]
+
+[tool.coverage.report]
+fail_under = 70
+show_missing = true
+skip_covered = true
