@@ -1,0 +1,7 @@
+code,name,description
+card_operations,Operaciones de Tarjetas,"Emisión, entrega, bloqueo de PIN y fallos de tarjetas"
+digital_support,Soporte Digital,"App, billeteras móviles, tarjetas virtuales y accesos"
+payments_transfers,Pagos y Transferencias,"Transferencias, recargas, pagos y efectivo"
+fraud_security,Fraude y Seguridad,"Movimientos no reconocidos, tarjetas y dispositivos comprometidos"
+kyc_compliance,Cumplimiento (KYC),"Verificación de identidad y origen de fondos"
+customer_care,Atención al Cliente,"Consultas informativas, comisiones, divisas y gestión de la cuenta"

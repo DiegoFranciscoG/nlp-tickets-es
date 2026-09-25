@@ -1,0 +1,10 @@
+code,name,description
+cards,Tarjetas,"Emisión, entrega, activación, PIN y funcionamiento de tarjetas físicas"
+digital_channels,Banca digital,"App, billeteras móviles, tarjetas virtuales y código de acceso"
+card_payments,Pagos con tarjeta,"Pagos rechazados, pendientes, revertidos, duplicados y reembolsos"
+cash_atm,Efectivo y cajeros,"Retiros, depósitos y cajeros automáticos"
+transfers,Transferencias,"Envío y recepción de transferencias y beneficiarios"
+top_ups,Recargas,"Recargas de saldo por tarjeta, transferencia o efectivo"
+fees_fx,Comisiones y divisas,"Comisiones cobradas, tipo de cambio y monedas admitidas"
+security_fraud,Seguridad y fraude,"Movimientos no reconocidos, tarjetas o teléfonos perdidos o comprometidos"
+account_kyc,Cuenta e identidad,"Datos personales, verificación de identidad, requisitos y cierre de cuenta"
