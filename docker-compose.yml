@@ -12,6 +12,8 @@ services:
       POSTGRES_DB: ${POSTGRES_DB:-nlp_tickets}
     volumes:
       - pgdata:/var/lib/postgresql/data
+    ports:
+      - "127.0.0.1:55432:5432" # solo local: permite usar la CLI desde el host
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
       interval: 5s
