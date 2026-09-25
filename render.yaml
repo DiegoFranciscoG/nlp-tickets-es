@@ -1,0 +1,30 @@
+# Blueprint de Render (plan free: 0,1 CPU / 512 MB, se duerme tras 15 min sin tráfico).
+# Los secretos se cargan en el panel de Render (sync: false); nunca en este archivo.
+services:
+  - type: web
+    name: nlp-tickets-api
+    runtime: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    autoDeploy: false
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: DATABASE_URL # URL de Neon (pgvector incluido)
+        sync: false
+      - key: API_KEYS_CLIENT
+        sync: false
+      - key: API_KEYS_REVIEWER
+        sync: false
+      - key: CORS_ALLOWED_ORIGINS
+        sync: false
+      - key: MODEL_URL # asset del modelo en GitHub Releases
+        sync: false
+      - key: MODEL_SHA256
+        sync: false
+      - key: RATE_LIMIT_PER_MINUTE
+        value: "30"
+      - key: SEED_ON_START # el seed se carga una vez desde local contra Neon
+        value: "false"
