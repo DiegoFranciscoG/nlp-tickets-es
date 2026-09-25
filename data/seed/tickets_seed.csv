@@ -1,0 +1,771 @@
+text,intent_code,channel,created_at
+Me gustaría saber cómo se calculan los tipos de cambio al transferir fondos.,exchange_rate,chat,2026-01-06T15:50+00:00
+"Puse dinero en mi cuenta, pero no lo veo.",balance_not_updated_after_cheque_or_cash_deposit,branch,2026-01-06T23:03+00:00
+¿Por qué mi tarjeta no acepta ninguna transacción?,card_not_working,web,2026-01-07T02:27+00:00
+¿Puedo obtener una Visa en lugar de una MasterCard?,visa_or_mastercard,web,2026-01-07T04:10+00:00
+"¿Qué monedas no puedo tener en grandes cantidades, y si es así, cuáles son?",fiat_currency_support,email,2026-01-07T07:07+00:00
+¿Qué necesito hacer para cambiar mi dinero?,exchange_via_app,branch,2026-01-07T19:29+00:00
+Hay la misma transacción mostrando más de una vez.,transaction_charged_twice,chat,2026-01-08T19:37+00:00
+¿Por qué el cajero automático no me da mi dinero?,declined_cash_withdrawal,email,2026-01-09T19:01+00:00
+¿Por qué recibiría un error de que mi transferencia no es posible cuando ya lo he hecho antes?,beneficiary_not_allowed,email,2026-01-09T19:46+00:00
+Hice un pago que está pendiente. ¿Se procesará?,pending_card_payment,chat,2026-01-10T05:08+00:00
+"Estoy esperando una transferencia de Estados Unidos, ¿cuánto falta?",transfer_timing,chat,2026-01-10T14:53+00:00
+Intenté sacar efectivo pero fue rechazado.,declined_cash_withdrawal,email,2026-01-10T17:40+00:00
+No sé dónde está la transacción.,transfer_not_received_by_recipient,web,2026-01-10T20:41+00:00
+Sigo esperando mi transferencia bancaria.,balance_not_updated_after_bank_transfer,chat,2026-01-11T00:16+00:00
+¿Sabes la razón del chequeo de identidad?,why_verify_identity,phone,2026-01-11T00:49+00:00
+¿Cuánto tiene que estar el saldo para que el sistema se actualice?,automatic_top_up,web,2026-01-11T13:09+00:00
+La máquina solo me dio cien cuando yo quería 20.,wrong_amount_of_cash_received,web,2026-01-11T14:36+00:00
+¿Hay cargos por recibir dinero?,top_up_by_bank_transfer_charge,chat,2026-01-13T00:54+00:00
+¿Qué hago si accidentalmente dañé mi tarjeta?,card_not_working,email,2026-01-13T07:27+00:00
+¿Qué documentos necesito para verificar quién soy?,verify_my_identity,email,2026-01-14T00:09+00:00
+Compré algo y tengo un problema con el tipo de cambio aplicado.,card_payment_wrong_exchange_rate,email,2026-01-14T02:52+00:00
+¿Puedo cambiar mi PIN en internet?,change_pin,phone,2026-01-14T15:34+00:00
+¿Cuándo se actualiza mi saldo para una transferencia?,balance_not_updated_after_bank_transfer,phone,2026-01-14T16:28+00:00
+¿Cuánto puedo retirar en un mes sin incurrir en cargos?,cash_withdrawal_charge,chat,2026-01-15T17:41+00:00
+¿Cómo puede mi amigo pagarme?,receiving_money,email,2026-01-16T04:51+00:00
+¿Qué es un código de verificación?,verify_top_up,phone,2026-01-16T06:49+00:00
+¿Cómo obtengo una nueva tarjeta cuando mi antigua expira?,card_about_to_expire,social,2026-01-16T12:42+00:00
+"Por favor, explíquenme cómo uso las tarjetas temporales.",get_disposable_virtual_card,chat,2026-01-16T13:27+00:00
+Necesito saber si hay un máximo que puedo recargar.,top_up_limits,web,2026-01-17T15:31+00:00
+¿Hay alguna manera de ver el historial de dónde provienen mis fondos?,verify_source_of_funds,phone,2026-01-17T20:52+00:00
+¿Puedo usar mi Apple Watch para pagar gasolina?,apple_pay_or_google_pay,web,2026-01-18T07:46+00:00
+¿Por qué no se aprobó mi pago al beneficiario X?,beneficiary_not_allowed,chat,2026-01-18T16:17+00:00
+¿Cómo cierro mi cuenta?,terminate_account,chat,2026-01-19T04:22+00:00
+¿Falló mi transferencia?,failed_transfer,chat,2026-01-19T21:48+00:00
+Mis retiros iban bien hasta que me fueron rechazados hoy. ¿Qué está pasando?,declined_cash_withdrawal,chat,2026-01-20T14:47+00:00
+¿Por qué todavía no ha llegado mi nueva tarjeta?,card_arrival,email,2026-01-21T06:54+00:00
+Hace un par de semanas se realizó una transacción extraña en mi cuenta por un vendedor que no reconozco. ¿Podrías por favor revisar esta transacción por mí?,direct_debit_payment_not_recognised,chat,2026-01-21T13:44+00:00
+¿Hay alguna forma de ver la fuente del dinero?,verify_source_of_funds,chat,2026-01-21T23:21+00:00
+"Intenté recargar por primera vez hoy ya que soy un cliente nuevo. No parece que esté funcionando. Ha estado en espera durante al menos media hora. Por favor, solucionen esto.",pending_top_up,web,2026-01-22T05:51+00:00
+Hola. Acabo de darme cuenta de que me cobraron dos veces por un restaurante que visité esta semana. ¿Puedes revertir el cargo adicional?,transaction_charged_twice,phone,2026-01-22T07:31+00:00
+¿Cuál es mi límite de recarga?,top_up_limits,email,2026-01-23T10:48+00:00
+"Realmente necesito ayuda para entender por qué mi transferencia sigue fallando. Estoy tratando de enviar dinero a un amigo. Por favor, ayúdame.",failed_transfer,chat,2026-01-24T10:03+00:00
+¿Cómo reemplazo una tarjeta que va a expirar?,card_about_to_expire,phone,2026-01-25T03:11+00:00
+Necesito más dinero en mi cuenta. ¿Puedo agregar más mediante una transferencia?,transfer_into_account,email,2026-01-25T03:31+00:00
+¿Podría obtener una tarjeta adicional?,getting_spare_card,email,2026-01-25T13:13+00:00
+¿Cuáles son los pasos para cambiar mi código de acceso?,passcode_forgotten,chat,2026-01-26T00:22+00:00
+Necesito cambiar una moneda - ¿puedo hacer eso aquí?,exchange_via_app,phone,2026-01-26T10:19+00:00
+"Cuando recibí mi efectivo, ellos tuvieron mi tipo de cambio incorrecto.",wrong_exchange_rate_for_cash_withdrawal,social,2026-01-26T10:39+00:00
+"Ya no tengo mi teléfono con la aplicación, ¿qué debo hacer?",lost_or_stolen_phone,chat,2026-01-26T10:57+00:00
+"Hola. Me encontré con un problema con una transferencia esta mañana. Estaba tratando de enviar dinero a unos amigos, pero cuando intenté enviarlo, la transferencia falló. No sé qué está causando que la transferencia sea rechazada. Por favor, diganme qué está causando el problema. Gracias.",failed_transfer,chat,2026-01-26T19:40+00:00
+¿Dónde puedo usar mi Mastercard?,card_acceptance,web,2026-01-26T21:33+00:00
+¿Puedo recibir dinero transferido a mi cuenta en diferentes intervalos durante mi viaje?,automatic_top_up,web,2026-01-27T05:53+00:00
+¿Qué monedas están disponibles para mi uso en mantenimiento e cambio de moneda?,fiat_currency_support,email,2026-01-27T06:15+00:00
+"Saqué efectivo del cajero automático, pero algo debió salir mal. Mi cuenta muestra la cantidad correcta de efectivo que saqué, pero el cajero automático no me dio esa cantidad. ¿Cómo recupero mi dinero?",wrong_amount_of_cash_received,branch,2026-01-27T15:30+00:00
+"Hay múltiples ocasiones en las que agregaste una tarifa al pago, así como algunas en las que no lo hiciste. ¿Tienes un esquema de cuándo se agregará una tarifa?",card_payment_fee_charged,chat,2026-01-27T20:17+00:00
+¿Cómo uso una tarjeta para recargar?,topping_up_by_card,chat,2026-01-27T20:37+00:00
+Alguien más podría estar usando mi tarjeta sin mi permiso.,compromised_card,email,2026-01-27T23:23+00:00
+¿Cuánto tiempo suelen tardar las transferencias? ¿Hay alguna manera de acelerar el proceso? Mi amiga necesita desesperadamente el dinero que le envié.,transfer_not_received_by_recipient,chat,2026-01-28T01:34+00:00
+Recibí una tarifa que no debí haber recibido.,card_payment_fee_charged,email,2026-01-28T08:48+00:00
+¿Qué debo por una tarjeta nueva?,order_physical_card,web,2026-01-28T15:55+00:00
+¿Cómo elimino una cuenta?,terminate_account,chat,2026-01-28T21:03+00:00
+Mi recarga fue cancelada.,top_up_reverted,email,2026-01-28T22:48+00:00
+"Quiero un nuevo PIN, por favor.",change_pin,chat,2026-01-29T00:10+00:00
+¿Puedes enviarme una tarjeta nueva y bloquear la que tengo actualmente? Estoy en España y me robaron la cartera.,lost_or_stolen_card,branch,2026-01-29T02:17+00:00
+Necesito solicitar una nueva tarjeta ya que la otra me la robaron.,lost_or_stolen_card,web,2026-01-29T02:34+00:00
+¿Puedo tener una tarjeta adicional duplicada?,getting_spare_card,social,2026-01-29T10:20+00:00
+Quiero retractar mi transacción.,cancel_transfer,web,2026-01-29T15:21+00:00
+"Para las tarjetas desechables, ¿cuáles son las restricciones?",disposable_card_limits,chat,2026-01-30T02:40+00:00
+¿Se puede entregar en una fecha determinada?,card_delivery_estimate,branch,2026-01-30T18:01+00:00
+Mi transferencia fue rechazada. ¿Por qué sucedió esto?,declined_transfer,chat,2026-01-31T04:25+00:00
+¿Proporcionan cambio de moneda a euros?,fiat_currency_support,web,2026-01-31T15:40+00:00
+¿Qué documentación necesito para la verificación de identidad?,verify_my_identity,chat,2026-01-31T19:23+00:00
+Parece que un pago que he hecho aún no ha sido procesado.,pending_card_payment,chat,2026-01-31T20:51+00:00
+¿Qué debo hacer si se me ha cobrado dos veces por la misma transacción?,transaction_charged_twice,chat,2026-02-01T00:27+00:00
+"Si recargo mediante transferencia, ¿me van a cobrar?",top_up_by_bank_transfer_charge,email,2026-02-01T06:26+00:00
+¿Por qué el estado pendiente de mi retiro de efectivo está tardando tanto?,pending_cash_withdrawal,social,2026-02-01T11:27+00:00
+Estoy cancelando este cargo. Aún no he recibido lo que compré de estas personas hace un tiempo.,request_refund,chat,2026-02-01T14:51+00:00
+Me gustaría obtener unas cuantas tarjetas físicas más.,getting_spare_card,web,2026-02-02T18:22+00:00
+Hice un depósito en efectivo y el saldo no se actualizó.,balance_not_updated_after_cheque_or_cash_deposit,web,2026-02-02T23:10+00:00
+¿Cuál es el límite en el número de tarjetas desechables que puedo tener?,disposable_card_limits,email,2026-02-03T04:56+00:00
+"Mi pedido aún no ha llegado, ¿qué puedo hacer?",request_refund,phone,2026-02-03T07:53+00:00
+"Si quiero que un amigo complete mi cuenta, ¿puede hacerlo?",topping_up_by_card,chat,2026-02-03T14:37+00:00
+¿Qué se hace para transferir dinero a mi cuenta?,transfer_into_account,chat,2026-02-03T20:02+00:00
+¿Puedo obtener una visa o tiene que ser algo más?,visa_or_mastercard,web,2026-02-04T01:14+00:00
+¿Puedo recargar usando mi cheque?,top_up_by_cash_or_cheque,email,2026-02-04T01:21+00:00
+No estoy satisfecho con su servicio y solicito que se cancele mi cuenta.,terminate_account,branch,2026-02-04T06:24+00:00
+No veo ningún cambio en mi saldo.,balance_not_updated_after_bank_transfer,phone,2026-02-04T18:59+00:00
+¿Cuánto vale mi dinero en otros países?,exchange_rate,chat,2026-02-05T00:32+00:00
+¿Cómo cambio mi clave de acceso?,passcode_forgotten,chat,2026-02-05T06:31+00:00
+No puedo hacer que mi tarjeta virtual desechable funcione.,virtual_card_not_working,web,2026-02-05T21:41+00:00
+Me gustaría disputar un pago que no realicé.,direct_debit_payment_not_recognised,email,2026-02-06T05:27+00:00
+¿Qué debo hacer si el cajero automático se traga mi tarjeta?,card_swallowed,phone,2026-02-06T07:31+00:00
+Dime tu opinión sobre el tipo de cambio.,exchange_rate,email,2026-02-06T08:40+00:00
+¿Puedo tener dinero en más de una moneda en mi cuenta?,fiat_currency_support,web,2026-02-06T16:02+00:00
+¿Por qué me cobraron una tarifa extra de $1 en el estado de cuenta?,extra_charge_on_statement,email,2026-02-06T19:31+00:00
+Me cobraron demasiadas veces por una transacción.,transaction_charged_twice,email,2026-02-07T02:20+00:00
+Necesito transferir algo a China. Es urgente. ¿Cuántos días tomará llegar allí?,transfer_timing,email,2026-02-07T06:55+00:00
+¿Qué hago si no puedo probar mi identidad?,unable_to_verify_identity,chat,2026-02-07T08:37+00:00
+"Mi estado civil ha cambiado, tengo que corregir mi nombre para reflejar eso.",edit_personal_details,chat,2026-02-07T09:18+00:00
+¿Cómo puedo localizar la tarjeta virtual?,getting_virtual_card,chat,2026-02-07T23:18+00:00
+"Por favor, expliquen cómo funcionan las tarjetas virtuales temporales.",get_disposable_virtual_card,web,2026-02-08T16:26+00:00
+¿Puedo pedirle a un amigo que me envíe dinero directamente?,receiving_money,email,2026-02-09T02:48+00:00
+¿Qué tarjetas aceptan para recargar?,supported_cards_and_currencies,chat,2026-02-09T06:30+00:00
+¿Me van a cobrar por enviar más tarjetas?,getting_spare_card,email,2026-02-09T06:36+00:00
+No tengo contraseña.,passcode_forgotten,social,2026-02-09T06:46+00:00
+"¿Están correctas mis configuraciones de pago sin contacto? Intenté usarlo hoy, pero no funcionaba.",contactless_not_working,chat,2026-02-09T07:34+00:00
+¿Puedes ayudarme? Tengo una transacción duplicada en mi cuenta y no entiendo por qué.,transaction_charged_twice,web,2026-02-09T09:20+00:00
+¿Por qué hubo un cargo extra cuando retiré mi dinero?,cash_withdrawal_charge,chat,2026-02-09T09:29+00:00
+¿Hay alguna forma de hacer recargas automáticas?,automatic_top_up,web,2026-02-09T10:02+00:00
+¿Me puedes ayudar a recuperar mi tarjeta?,card_swallowed,social,2026-02-09T15:34+00:00
+¿Cuánto cuesta la tarifa de recarga?,top_up_by_card_charge,social,2026-02-10T07:13+00:00
+"Creo que alguien vio mi PIN y estoy de vacaciones en España, ¿puedo cambiarlo localmente en un cajero automático?",change_pin,chat,2026-02-10T07:23+00:00
+¿Cómo hago que mi tarjeta aparezca en la aplicación?,card_linking,email,2026-02-10T11:08+00:00
+¡Ayuda! Necesito cancelar una transacción.,cancel_transfer,web,2026-02-10T21:02+00:00
+Los pagos sin contacto deben estar habilitados para mi tarjeta.,contactless_not_working,web,2026-02-11T06:42+00:00
+¿Puedo elegir entre Visa o Mastercard?,visa_or_mastercard,email,2026-02-11T09:15+00:00
+¿Cuánto tiempo tarda en verificar un retiro de efectivo?,pending_cash_withdrawal,chat,2026-02-12T04:59+00:00
+¿Mi tarjeta será una MasterCard o una Visa?,visa_or_mastercard,chat,2026-02-12T05:14+00:00
+¿Cuáles son los plazos para que el dinero esté disponible en mi cuenta?,transfer_timing,email,2026-02-12T09:52+00:00
+"Sé que hay dinero en mi cuenta, ¿por qué me rechazó mi cuenta?",declined_card_payment,chat,2026-02-12T15:42+00:00
+¿De cuáles cajeros automáticos puedo sacar dinero?,atm_support,chat,2026-02-12T17:40+00:00
+Recientemente hice una transferencia que me gustaría cancelar.,cancel_transfer,email,2026-02-12T21:44+00:00
+Encontré un débito directo que me gustaría impugnar.,direct_debit_payment_not_recognised,chat,2026-02-13T07:09+00:00
+¿Sabes qué negocios aceptarán mi tarjeta?,card_acceptance,branch,2026-02-13T17:40+00:00
+"Mi tarjeta expirará pronto, ¿cuándo debo pedir una nueva?",card_about_to_expire,social,2026-02-14T12:07+00:00
+"Mi nueva tarjeta ha llegado, ¿cuál es el procedimiento de activación?",activate_my_card,web,2026-02-14T14:06+00:00
+Veo un pago revertido en mi cuenta. ¿Por qué ha sucedido esto?,reverted_card_payment,phone,2026-02-14T15:37+00:00
+No tengo los medios para probar mi identidad.,unable_to_verify_identity,chat,2026-02-15T11:38+00:00
+¿Se puede recargar Google Pay?,apple_pay_or_google_pay,chat,2026-02-15T14:43+00:00
+¿Pueden decirme en qué países ofrecen soporte?,country_support,phone,2026-02-15T15:22+00:00
+¿Hay alguna tarifa asociada con recibir dinero?,top_up_by_bank_transfer_charge,chat,2026-02-15T17:11+00:00
+¡Creo que me han robado la tarjeta!,lost_or_stolen_card,chat,2026-02-15T19:49+00:00
+Dime por qué se rechazó el pago de mi tarjeta.,declined_card_payment,phone,2026-02-15T21:17+00:00
+Realmente necesito saber cómo cambiar mi PIN.,change_pin,chat,2026-02-16T01:50+00:00
+Estoy teniendo dificultades para probar mi identidad.,unable_to_verify_identity,email,2026-02-16T06:18+00:00
+"Por favor, hazme saber cómo hacer un pedido para una tarjeta virtual.",getting_virtual_card,web,2026-02-16T16:22+00:00
+¿Dice que mi recarga está incompleta?,pending_top_up,chat,2026-02-16T23:33+00:00
+Necesito añadir entrega exprés si esa es una opción.,card_delivery_estimate,web,2026-02-17T03:44+00:00
+Dime qué necesito hacer para activar mi tarjeta.,activate_my_card,chat,2026-02-17T21:40+00:00
+Pensé que era gratis hacer un retiro. ¿Entonces cuánto cuesta ahora?,cash_withdrawal_charge,web,2026-02-17T23:50+00:00
+"Puse algo de efectivo en mi cuenta, pero no lo está mostrando en mi saldo.",balance_not_updated_after_cheque_or_cash_deposit,chat,2026-02-18T03:06+00:00
+¿Qué debo hacer con mi cajero automático atascado?,card_swallowed,chat,2026-02-18T07:59+00:00
+¿Podemos omitir la verificación?,why_verify_identity,chat,2026-02-18T12:18+00:00
+¿Qué salió mal con mi transferencia?,declined_transfer,chat,2026-02-18T12:38+00:00
+¿Dónde se encuentra el número PIN?,get_physical_card,email,2026-02-19T03:36+00:00
+¿Cuál es el plazo para una transferencia en Europa?,transfer_timing,chat,2026-02-19T04:44+00:00
+¿Cuánto tiempo tarda uno de estos artículos en llegar a los EE. UU.?,card_delivery_estimate,web,2026-02-19T12:12+00:00
+¿Por qué la aplicación mostraría un retiro que no hice?,cash_withdrawal_not_recognised,social,2026-02-19T16:48+00:00
+Necesito cambiar el PIN de mi tarjeta.,change_pin,phone,2026-02-19T16:59+00:00
+¿Por qué hay una tarifa en un pago con tarjeta?,card_payment_fee_charged,phone,2026-02-19T23:17+00:00
+¿Por qué no puedo editar mis datos personales?,edit_personal_details,web,2026-02-20T01:29+00:00
+¿Cómo arreglo mi tarjeta si está dañada?,card_not_working,email,2026-02-21T09:21+00:00
+Acabo de casarme y necesito cambiar mi nombre en la cuenta.,edit_personal_details,branch,2026-02-21T16:49+00:00
+¿Se me cobrará una tarifa adicional si necesito cambiar moneda?,exchange_charge,chat,2026-02-22T09:48+00:00
+Necesito más ayuda sobre cómo activar mi tarjeta.,activate_my_card,chat,2026-02-22T23:49+00:00
+¿Puedes ayudarme a rastrear mi tarjeta?,card_arrival,phone,2026-02-23T00:55+00:00
+¿Hay alguna restricción sobre las tarjetas desechables?,disposable_card_limits,web,2026-02-23T10:36+00:00
+¿Cuánto tengo que pagar para aceptar una transferencia internacional?,exchange_charge,chat,2026-02-24T06:39+00:00
+"¿Puedes averiguar por qué mi tarjeta de crédito no procesó el pago? Fue rechazada para la recarga, así que ¿cuál es el problema?",top_up_failed,web,2026-02-24T07:26+00:00
+"Mi transferencia está pendiente, ¿por qué?",pending_transfer,email,2026-02-24T16:49+00:00
+Quiero transferir dinero usando mi tarjeta de crédito.,topping_up_by_card,web,2026-02-24T22:08+00:00
+"Después de hacer una transferencia de una cuenta del Reino Unido, esta no aparece. ¿Cuánto tiempo suelen tardar estas transferencias para ustedes? Quiero estar seguro de que todo está bien.",balance_not_updated_after_bank_transfer,email,2026-02-24T22:10+00:00
+¿Ofrecen servicios de cuentas para niños y adolescentes?,age_limit,phone,2026-02-24T22:25+00:00
+¿Cuánto cuesta cambiar mi saldo a una moneda extranjera?,exchange_charge,branch,2026-02-25T00:25+00:00
+¿Qué debo hacer si el cajero automático retuvo mi tarjeta?,card_swallowed,phone,2026-02-26T09:35+00:00
+¿Hay alguna forma de usar un cheque para recargar mi cuenta?,top_up_by_cash_or_cheque,branch,2026-02-27T23:30+00:00
+Mi transferencia falló. ¡Ayuda!,failed_transfer,web,2026-03-02T04:30+00:00
+Noté en mi estado de cuenta en línea que un retiro de cajero automático que hice temprano aún está pendiente. ¿Es esto correcto?,pending_cash_withdrawal,social,2026-03-03T01:27+00:00
+¿Cómo sé si mi recarga funcionó?,top_up_failed,chat,2026-03-03T03:25+00:00
+No debería aplicarse una tarifa si me robaron la tarjeta.,lost_or_stolen_card,chat,2026-03-03T08:25+00:00
+Necesito hacer varias tarjetas desechables por día.,disposable_card_limits,chat,2026-03-03T17:56+00:00
+Mi tarjeta virtual desechable no funciona.,virtual_card_not_working,branch,2026-03-03T21:17+00:00
+"Usé mi tarjeta para recargar, ¡pero el dinero se fue!",topping_up_by_card,email,2026-03-04T11:25+00:00
+¿Por qué necesito mostrar una identificación?,verify_my_identity,email,2026-03-04T11:50+00:00
+¿Cuándo puedo esperar que llegue mi nueva tarjeta?,card_delivery_estimate,web,2026-03-04T19:38+00:00
+¿Se me cobrará por recargar mi cuenta usando una transferencia bancaria?,top_up_by_bank_transfer_charge,email,2026-03-05T04:40+00:00
+¿Qué debo hacer si creo que alguien ha utilizado mi tarjeta?,compromised_card,phone,2026-03-05T06:15+00:00
+¿Cómo puedo recargar mi cuenta y qué moneda puedo usar?,supported_cards_and_currencies,email,2026-03-05T10:43+00:00
+¿No debería estar aquí mi nueva tarjeta ya?,card_arrival,email,2026-03-05T11:58+00:00
+¿En qué lugares aceptan mi tarjeta?,card_acceptance,web,2026-03-05T12:28+00:00
+"Por alguna razón, mi pago con tarjeta no funcionó.",declined_card_payment,email,2026-03-06T00:35+00:00
+Mi transferencia ha estado pendiente por mucho tiempo. Ya verifiqué dos veces la información de mi cuenta y es correcta. ¿Por qué está tardando tanto en 2018 en transferir dinero?,pending_transfer,chat,2026-03-06T05:20+00:00
+Muéstrame la fuente de mi dinero.,verify_source_of_funds,web,2026-03-06T07:16+00:00
+¿Hay un cargo por usar una tarjeta de recarga en los EE. UU.?,top_up_by_card_charge,chat,2026-03-06T13:49+00:00
+¿Es la verificación de identidad parte de la política del banco?,why_verify_identity,chat,2026-03-07T07:14+00:00
+Veo actividad de retiro de efectivo en la app que no es mía.,cash_withdrawal_not_recognised,web,2026-03-07T16:53+00:00
+¿Por qué el cajero automático se tragó mi tarjeta?,card_swallowed,chat,2026-03-08T07:02+00:00
+¿Qué puedo hacer si me robaron los datos de mi tarjeta de mi carro? Creo que usaron mi tarjeta para comprar gasolina.,compromised_card,chat,2026-03-08T16:19+00:00
+Quiero desactivar mi cuenta.,terminate_account,web,2026-03-08T18:47+00:00
+¿Hay alguna tarifa por recargar una tarjeta?,top_up_by_card_charge,email,2026-03-08T23:04+00:00
+¿Cuánto tiempo se tarda en recibir mi tarjeta? Estoy apurado.,card_delivery_estimate,chat,2026-03-09T16:18+00:00
+¿Cómo puedo averiguar por qué mi transferencia no se realizó?,failed_transfer,chat,2026-03-10T07:47+00:00
+Un pago aparece en la app que nunca hice.,card_payment_not_recognised,chat,2026-03-11T14:50+00:00
+¿Por qué necesitan ser verificadas las recargas?,verify_top_up,social,2026-03-11T22:45+00:00
+Me cobraron varias veces por una transacción.,transaction_charged_twice,web,2026-03-12T05:08+00:00
+¿Hay alguna tarifa para cambiar divisas extranjeras?,exchange_charge,social,2026-03-12T19:13+00:00
+Perdí mi tarjeta. ¿Puedes ayudarme?,lost_or_stolen_card,chat,2026-03-12T22:46+00:00
+¿Cómo puedo verificar el estado de mi nueva tarjeta?,card_arrival,social,2026-03-13T01:51+00:00
+Acabo de leer mi estado de cuenta y hay un pago que no reconozco.,card_payment_not_recognised,chat,2026-03-13T12:09+00:00
+¿Qué límites existen en las tarjetas virtuales?,disposable_card_limits,email,2026-03-13T23:12+00:00
+mi transacción en el cajero automático fue incorrecta.,wrong_amount_of_cash_received,web,2026-03-14T09:26+00:00
+¿Por qué tengo un cargo extra en mi estado de cuenta?,extra_charge_on_statement,email,2026-03-14T20:27+00:00
+"Entonces, mi recarga falló, ¿podrían decirme por qué?",top_up_failed,email,2026-03-15T07:05+00:00
+¿Dónde voy para restablecer el código de acceso?,passcode_forgotten,branch,2026-03-15T11:17+00:00
+¿Por qué me están diciendo que esta transferencia no se procesará?,beneficiary_not_allowed,chat,2026-03-15T12:33+00:00
+Quiero agregar fondos a mi cuenta. ¿Qué métodos de pago se aceptan?,supported_cards_and_currencies,web,2026-03-15T14:43+00:00
+¿Me cobrarán por recargar mediante transferencia?,top_up_by_bank_transfer_charge,chat,2026-03-16T03:47+00:00
+¿Habrá un cargo cuando se agregue dinero a mi cuenta?,top_up_by_bank_transfer_charge,email,2026-03-16T11:03+00:00
+¿Qué necesito hacer para realizar verificaciones de identidad?,verify_my_identity,email,2026-03-16T15:24+00:00
+¿La moneda de mi país está respaldada por su sistema?,fiat_currency_support,web,2026-03-16T16:18+00:00
+¿Qué debo hacer si mi pago con tarjeta fue cancelado?,reverted_card_payment,web,2026-03-16T21:40+00:00
+¿Cuál es el proceso de transferencia?,transfer_into_account,web,2026-03-17T11:21+00:00
+Ha pasado una semana desde que pedí mi tarjeta y no ha llegado. ¿Por favor ayuda?,card_arrival,chat,2026-03-17T12:19+00:00
+¿Es posible obtener un reembolso por el artículo?,request_refund,email,2026-03-17T22:40+00:00
+"Después de revisar mis transacciones con tarjeta, noté que me cobraron dos veces por una compra en un restaurante de principios de esta semana. ¿Podrías eliminar una de estas transacciones de mi cuenta, ya que no es precisa?",transaction_charged_twice,social,2026-03-18T07:35+00:00
+"Se suponía que me hacían un reembolso, pero no lo veo.",refund_not_showing_up,chat,2026-03-18T08:56+00:00
+¿El PIN de la tarjeta?,get_physical_card,web,2026-03-18T09:58+00:00
+¿Puedo tener una tarjeta incluso si no estoy viviendo en el Reino Unido?,country_support,web,2026-03-18T19:08+00:00
+Solo necesitaba saber por qué se rechazó mi tarjeta.,declined_card_payment,chat,2026-03-19T01:30+00:00
+¿Cómo es que mi retiro de efectivo vino con una tarifa innecesaria?!.,cash_withdrawal_charge,chat,2026-03-19T17:33+00:00
+¿Emiten tarjetas para alguien que vive en los Estados Unidos?,country_support,chat,2026-03-20T00:31+00:00
+¿Dónde puedo depositar un cheque?,top_up_by_cash_or_cheque,web,2026-03-20T11:12+00:00
+¿Cuánto cuesta cada transferencia?,top_up_by_bank_transfer_charge,branch,2026-03-20T13:15+00:00
+¿Qué debo hacer si veo que un retiro está pendiente?,pending_cash_withdrawal,chat,2026-03-21T00:47+00:00
+¿Cómo se canceló mi recarga?,top_up_reverted,web,2026-03-21T07:57+00:00
+"Después de comprar un artículo, noté que el tipo de cambio era incorrecto.",card_payment_wrong_exchange_rate,web,2026-03-21T13:41+00:00
+"Hay algo mal con mi tarjeta. Intenté usarla varias veces hoy en diferentes lugares y simplemente no funcionó. Las transacciones que intenté hacer eran muy pequeñas, así que no sé qué está pasando.",card_not_working,phone,2026-03-21T17:04+00:00
+¿Por qué no se ha procesado mi recarga todavía? Pensé que se suponía que era instantánea. ¿Estoy equivocado? ¿Por qué sigue pendiente?,pending_top_up,phone,2026-03-21T21:04+00:00
+"Puse dinero para las vacaciones y no se está mostrando. Necesito ese dinero hoy, ¿cuánto tiempo tomará?",pending_transfer,phone,2026-03-22T07:42+00:00
+Mi saldo no es correcto. No se ha actualizado por el depósito en efectivo o cheque.,balance_not_updated_after_cheque_or_cash_deposit,web,2026-03-22T19:44+00:00
+¿Qué hago si mi tarjeta se daña?,card_not_working,web,2026-03-23T12:00+00:00
+"Ya no necesito AUD, necesito GBP en su lugar, ¿cómo puedo hacer que esto suceda?",exchange_via_app,chat,2026-03-23T19:43+00:00
+Quiero obtener una tarjeta Visa.,visa_or_mastercard,branch,2026-03-23T21:56+00:00
+¿Por qué no puede mi beneficiario hacer transacciones?,beneficiary_not_allowed,email,2026-03-23T22:00+00:00
+Mi recarga puede haber sido revertida.,top_up_reverted,chat,2026-03-24T10:11+00:00
+No puedo usar mi tarjeta desechable virtual.,virtual_card_not_working,email,2026-03-24T14:06+00:00
+Debo verificar la fuente de mis fondos.,verify_source_of_funds,web,2026-03-24T18:25+00:00
+"Mi salario es en GBP, ¿puedo cambiar mis opciones en algún lugar?",receiving_money,chat,2026-03-24T22:38+00:00
+"Hola, intenté sacar efectivo del cajero automático pero miré mi estado de cuenta y aún muestra que está pendiente. ¿Está rota la máquina? ¿Recibiré mi dinero de regreso o se me cobrará por esto?",pending_cash_withdrawal,chat,2026-03-25T06:09+00:00
+¿Cuánto tiempo tarda en llegar mi nueva tarjeta?,card_arrival,chat,2026-03-25T07:34+00:00
+El cajero automático sigue rechazando mi transacción. Ya probé con dos cajeros automáticos diferentes. ¿Podrías revisar si todo está bien con mi cuenta?,declined_cash_withdrawal,chat,2026-03-25T14:50+00:00
+¿Qué documentación se necesita para la verificación de identidad?,verify_my_identity,phone,2026-03-25T19:56+00:00
+¿Cómo desbloqueo mi tarjeta?,pin_blocked,chat,2026-03-26T00:20+00:00
+"Esto no está bien, me dijeron que podía retirar efectivo en el cajero automático de forma gratuita.",cash_withdrawal_charge,chat,2026-03-26T10:30+00:00
+¿Por qué es tan alta la tarifa por retirar dinero? Siento que me cobraron de más y nunca habría utilizado este cajero si lo hubiera sabido de antemano.,wrong_exchange_rate_for_cash_withdrawal,web,2026-03-26T12:04+00:00
+¿Cuándo recibiré mi dinero? Ha pasado demasiado tiempo.,transfer_not_received_by_recipient,chat,2026-03-26T12:10+00:00
+¿Cómo puedo verificar si hay un comerciante no soportado para mi solicitud de transferencia?,declined_transfer,chat,2026-03-26T15:17+00:00
+Necesito depositar dinero en mi cuenta.,transfer_into_account,email,2026-03-27T02:30+00:00
+¿Por qué hubo una tarifa de transferencia en mi cuenta?,transfer_fee_charged,chat,2026-03-27T18:57+00:00
+"Podría necesitar cambiar entre USD y GBP, ¿esto es posible con su aplicación?",exchange_via_app,email,2026-03-28T04:58+00:00
+¿Cómo activar Google Pay para recargar?,apple_pay_or_google_pay,web,2026-03-28T10:10+00:00
+Necesito saber por qué una transferencia de dinero está disponible.,pending_transfer,email,2026-03-28T19:10+00:00
+"He estado usando mi cuenta frecuentemente para gestionar los pagos de mi casa de vacaciones en otro país, ¡y ahora me están cobrando tarifas ridículamente altas! ¿Qué pasa con eso? ¿No debería ser recompensado como un usuario frecuente?",transfer_fee_charged,chat,2026-03-28T21:10+00:00
+¿Por qué necesitas verificación de mi identidad?,why_verify_identity,chat,2026-03-29T05:24+00:00
+¿Puedo recibir pagos en otra moneda?,receiving_money,phone,2026-03-29T17:49+00:00
+¿Puedo recibir dinero en una moneda diferente?,receiving_money,chat,2026-03-29T21:27+00:00
+Necesito ayuda para vincular mi nueva tarjeta.,card_linking,social,2026-03-29T21:44+00:00
+¿Por qué se cobró una tarifa cuando transferí dinero?,transfer_fee_charged,chat,2026-03-30T05:30+00:00
+No podré verificar mi identidad.,unable_to_verify_identity,web,2026-03-30T21:25+00:00
+¿Cómo consigo tarjetas físicas adicionales?,getting_spare_card,web,2026-03-31T01:39+00:00
+¿Existe una opción de recarga automática?,automatic_top_up,web,2026-03-31T23:32+00:00
+¡Me robaron el teléfono! ¿Qué necesito hacer?,lost_or_stolen_phone,email,2026-04-02T01:13+00:00
+¿Recibiré una tarjeta nueva cuando la mía expire?,card_about_to_expire,email,2026-04-02T04:59+00:00
+¿Puedo usar el Apple Watch para hacer una recarga?,apple_pay_or_google_pay,chat,2026-04-03T23:09+00:00
+"Mi madre depositó un cheque en mi cuenta la semana pasada, ¿por qué todavía no aparece?",balance_not_updated_after_cheque_or_cash_deposit,email,2026-04-04T19:09+00:00
+¿Por qué no funcionaría mi tarjeta sin contacto para el metro?,contactless_not_working,phone,2026-04-05T12:41+00:00
+¿Cómo cambio mis datos?,edit_personal_details,phone,2026-04-05T18:52+00:00
+Tengo un pago que aún no se ha procesado.,pending_card_payment,chat,2026-04-06T06:04+00:00
+¿Hay alguna manera de revertir una transacción?,cancel_transfer,web,2026-04-06T07:26+00:00
+¿Esta tarjeta funcionará en todo el mundo?,card_acceptance,branch,2026-04-06T09:09+00:00
+"Acabo de recibir una tarjeta, ¿cómo puedo agregarla a la aplicación?",card_linking,email,2026-04-06T21:34+00:00
+¿Dónde verifico una tarjeta de recarga?,verify_top_up,chat,2026-04-06T22:21+00:00
+¿Por qué mi cuenta muestra como pendiente un retiro de efectivo del cajero automático que ya he realizado?,pending_cash_withdrawal,email,2026-04-06T23:51+00:00
+¿Qué información necesito para ver mi fuente de dinero?,verify_source_of_funds,chat,2026-04-07T03:15+00:00
+¿Necesito usar un límite en las recargas?,top_up_limits,web,2026-04-07T05:04+00:00
+"Después de que recibí mi dinero en efectivo, descubrí que mi tipo de cambio estaba mal.",wrong_exchange_rate_for_cash_withdrawal,email,2026-04-07T22:45+00:00
+"El retiro de efectivo ha estado pendiente, ¿por qué es así?",pending_cash_withdrawal,chat,2026-04-08T00:47+00:00
+¿Por qué piden verificación de recarga?,verify_top_up,web,2026-04-08T01:32+00:00
+Me gustaría saber cómo transferir dinero a mi cuenta.,transfer_into_account,web,2026-04-08T17:41+00:00
+¿Es posible cambiar divisas?,exchange_via_app,chat,2026-04-08T17:56+00:00
+¿Cuál es la tarifa por los cargos de cambio?,exchange_charge,social,2026-04-08T21:06+00:00
+Necesito ayuda para arreglar mi sistema de pago sin contacto. No está funcionando en ningún lugar al que voy hoy.,contactless_not_working,web,2026-04-09T10:09+00:00
+"Acabo de recibir mi tarjeta. No está vinculada aún, ¿cómo puedo hacer eso?",card_linking,chat,2026-04-10T04:47+00:00
+¿Puedo hacer transacciones antes de la verificación de identidad?,why_verify_identity,chat,2026-04-10T07:56+00:00
+¿Es posible mantener dinero en múltiples monedas?,fiat_currency_support,web,2026-04-10T14:07+00:00
+¿Cómo puedo sacar mi tarjeta del cajero automático?,card_swallowed,phone,2026-04-11T03:55+00:00
+Ingrese mi PIN mal y se bloqueó. ¿Cuántos intentos tengo?,declined_cash_withdrawal,branch,2026-04-11T14:32+00:00
+Quiero cerrar mi cuenta debido a un mal servicio al cliente.,terminate_account,email,2026-04-12T04:52+00:00
+Debo haber ingresado mi PIN incorrectamente.,pin_blocked,social,2026-04-13T17:46+00:00
+¿Esta tarjeta es aceptada por los cajeros automáticos?,atm_support,phone,2026-04-14T17:28+00:00
+¡Hay un cargo extra pequeño en mi tarjeta! ¿Qué hago?,extra_charge_on_statement,email,2026-04-15T22:29+00:00
+"Por favor, ayúdame con mi tarjeta. He intentado usar mi tarjeta en dos cajeros automáticos diferentes, pero en repetidas ocasiones fue rechazada por el cajero automático.",declined_cash_withdrawal,chat,2026-04-16T08:33+00:00
+Miré en la aplicación y dice que retiré efectivo. ¡No lo hice!,cash_withdrawal_not_recognised,email,2026-04-16T22:19+00:00
+Mi hija necesita abrir una cuenta.,age_limit,email,2026-04-17T00:18+00:00
+No puedo ver mi recarga.,topping_up_by_card,email,2026-04-17T11:10+00:00
+Parece que hay un par de pagos listados en la aplicación que sé que no hice. ¿Hay alguna posibilidad de que alguien tenga acceso a mi tarjeta? ¿Puedes averiguar qué está pasando?,card_payment_not_recognised,chat,2026-04-17T15:07+00:00
+La aplicación dice que hice un retiro de efectivo aunque no lo hice.,cash_withdrawal_not_recognised,social,2026-04-17T21:19+00:00
+¿Por qué no puedo elegir la carta que quiero?,visa_or_mastercard,email,2026-04-18T01:06+00:00
+"Si quiero que mi hijo tenga su propia cuenta, ¿es posible?",age_limit,web,2026-04-18T11:25+00:00
+No he recibido el dinero del cheque que deposité.,balance_not_updated_after_cheque_or_cash_deposit,chat,2026-04-19T06:50+00:00
+¿Hay alguna forma de ver de dónde provino originalmente mi dinero?,verify_source_of_funds,email,2026-04-19T09:34+00:00
+¿Cuáles son los gastos de gestión por transferencia?,top_up_by_bank_transfer_charge,email,2026-04-19T13:20+00:00
+¿Puedes darme una tarjeta virtual?,getting_virtual_card,branch,2026-04-19T14:12+00:00
+No pude conseguir el efectivo que quería.,wrong_amount_of_cash_received,web,2026-04-19T19:45+00:00
+En la aplicación veo un débito directo que no reconozco.,direct_debit_payment_not_recognised,web,2026-04-19T20:55+00:00
+¿Se entregan las tarjetas en mi ubicación?,order_physical_card,chat,2026-04-19T23:38+00:00
+"¿Entonces, el PIN de la tarjeta?",get_physical_card,chat,2026-04-20T02:41+00:00
+¿Cuáles son los límites de dónde aceptarán mi tarjeta?,card_acceptance,chat,2026-04-21T19:17+00:00
+"Quiero vincular mi tarjeta contigo, ¿cómo?",card_linking,web,2026-04-22T15:33+00:00
+¿Puedo añadir fondos con una tarjeta de Estados Unidos?,supported_cards_and_currencies,phone,2026-04-23T08:28+00:00
+¿Dónde está el reembolso en mi estado de cuenta?,refund_not_showing_up,branch,2026-04-23T08:33+00:00
+¿Cuándo se aprobará mi recarga?,pending_top_up,phone,2026-04-23T14:05+00:00
+Hice un pago con mi tarjeta que fue cancelado.,reverted_card_payment,web,2026-04-23T17:42+00:00
+"Mi recarga parece no haber funcionado, ¿qué salió mal?",top_up_failed,web,2026-04-23T18:11+00:00
+¿Qué debo hacer una vez que mi tarjeta expire?,card_about_to_expire,chat,2026-04-23T19:00+00:00
+"Compré algo y quiero que me devuelvan el dinero, ¿puedo recibir ayuda con eso?",request_refund,phone,2026-04-23T19:22+00:00
+¿Se puede recargar de forma automática?,automatic_top_up,phone,2026-04-23T21:54+00:00
+¿Puedo convertir moneda con la aplicación?,exchange_via_app,web,2026-04-24T02:34+00:00
+¿Cuál es la manera más eficiente de activar mi nueva tarjeta?,activate_my_card,chat,2026-04-24T03:18+00:00
+¿Por qué no he recibido un reembolso aún?,refund_not_showing_up,chat,2026-04-24T12:18+00:00
+Alguien más usó mi tarjeta para retirar efectivo de un cajero automático.,cash_withdrawal_not_recognised,email,2026-04-24T14:54+00:00
+¿Cómo sé cómo está configurada mi cuenta? ¿me pagan en GBP?,receiving_money,web,2026-04-24T19:25+00:00
+Acabo de hacer un pedido y noté un cargo extra. ¿Por qué me han cobrado esto sin informarme?,card_payment_fee_charged,chat,2026-04-25T01:16+00:00
+¿Cuáles son las restricciones de las tarjetas desechables?,disposable_card_limits,chat,2026-04-25T01:28+00:00
+Mi cuenta fue cargada dos veces por una compra.,transaction_charged_twice,email,2026-04-25T05:40+00:00
+En qué países brindan soporte.,country_support,web,2026-04-25T15:00+00:00
+¿Puedo hacer una transferencia SWIFT?,top_up_by_bank_transfer_charge,chat,2026-04-26T04:29+00:00
+¿Se aceptan cheques para una recarga?,top_up_by_cash_or_cheque,social,2026-04-26T15:07+00:00
+¿Por qué me han cobrado un retiro en efectivo?,cash_withdrawal_charge,email,2026-04-26T18:07+00:00
+Me gustaría saber cuáles son sus tasas de cambio.,exchange_rate,chat,2026-04-26T20:56+00:00
+¿El transferencia aparecerá pronto en mi cuenta?,transfer_timing,email,2026-04-27T02:08+00:00
+Necesito agregar dinero a mi cuenta. ¿Puedo hacerlo mediante transferencia bancaria?,transfer_into_account,phone,2026-04-27T02:13+00:00
+¿Por qué me cobraron una tarifa aleatoria por una transferencia que hice?,transfer_fee_charged,branch,2026-04-27T16:10+00:00
+"Accidentalmente dejé mi teléfono en el hotel, así que ahora no puedo usar la aplicación.",lost_or_stolen_phone,branch,2026-04-27T22:18+00:00
+¿Cómo hago para ordenar una tarjeta?,order_physical_card,chat,2026-04-27T22:45+00:00
+¿Por qué no puedes autorizar a mi beneficiario?,beneficiary_not_allowed,chat,2026-04-28T19:22+00:00
+"Veo un cargo extra de $1 en mi estado de cuenta, ¿por qué es esto?",extra_charge_on_statement,phone,2026-04-29T05:56+00:00
+"¡Amigo, metí dinero en el cajero automático la semana pasada pero no está ahí! ¡Necesito el dinero ahora, resuelve esto!",balance_not_updated_after_cheque_or_cash_deposit,phone,2026-04-29T06:39+00:00
+¿Cuánto tiempo tomará mi retiro de efectivo?,pending_cash_withdrawal,chat,2026-04-29T16:30+00:00
+Actualmente mi tarjeta está dañada.,card_not_working,web,2026-04-30T01:29+00:00
+"He estado usando mi cuenta mientras estoy en el extranjero durante un tiempo, pero solo recientemente me han cobrado una tarifa. ¿Por qué me están cobrando una tarifa solamente ahora?",transfer_fee_charged,branch,2026-04-30T08:12+00:00
+¿Dónde puedo hacer un retiro de efectivo?,atm_support,email,2026-04-30T10:58+00:00
+¿Por qué no recibí la cantidad que solicité en el cajero automático?,wrong_amount_of_cash_received,chat,2026-04-30T19:15+00:00
+¿Cuántos intentos incorrectos causan que la tarjeta se bloquee?,pin_blocked,email,2026-05-01T00:47+00:00
+¿Cuánto tiempo se tarda en realizar una transferencia urgente desde China?,transfer_timing,web,2026-05-01T01:38+00:00
+¡La información de mi tarjeta parece haber sido robada! No sé de dónde vinieron estas transacciones y nunca he estado en la ciudad donde se realizaron. Necesito que bloqueen mi tarjeta lo antes posible para que esta persona no pueda seguir usándola.,compromised_card,chat,2026-05-01T02:02+00:00
+¿Tengo que esperar a una tarjeta física antes de recibir mi PIN?,get_physical_card,email,2026-05-01T03:14+00:00
+¿Cómo puedo solicitar un reemplazo para una tarjeta robada?,compromised_card,web,2026-05-01T19:54+00:00
+¿Qué causó que mi recarga fuera devuelta?,top_up_reverted,email,2026-05-02T00:19+00:00
+¿Por qué sigues rechazando mi pago? Ya he intentado varias veces con esta tarjeta y simplemente no está funcionando.,declined_card_payment,phone,2026-05-02T02:38+00:00
+¿Por qué se podría rechazar mi transferencia?,declined_transfer,web,2026-05-02T04:17+00:00
+¿Qué debo hacer sobre un cargo en mi cuenta que no hice?,direct_debit_payment_not_recognised,chat,2026-05-02T17:16+00:00
+Hay un registro de pago que nunca envié en la aplicación.,card_payment_not_recognised,chat,2026-05-02T17:20+00:00
+Parece que mi pago con tarjeta no funcionó.,declined_card_payment,web,2026-05-03T02:34+00:00
+"Por favor, cancela el último cargo de cajero automático en mi tarjeta, ya que mi tarjeta fue rechazada hoy más temprano y no recibí ese efectivo.",pending_cash_withdrawal,chat,2026-05-03T05:24+00:00
+Obtuve efectivo en el extranjero y el tipo de cambio aplicado es incorrecto.,wrong_exchange_rate_for_cash_withdrawal,web,2026-05-03T16:56+00:00
+"Por favor, díganme cómo obtener una tarjeta si resido en los EE. UU.",country_support,web,2026-05-04T04:31+00:00
+"Recargué mi cuenta, pero el dinero ahora no está.",topping_up_by_card,web,2026-05-04T06:13+00:00
+¿Tengo que usar un cajero automático aprobado por el banco para retirar dinero?,atm_support,chat,2026-05-04T07:34+00:00
+¿Hay alguna forma de recargar con Apple Pay?,apple_pay_or_google_pay,social,2026-05-04T19:15+00:00
+Los pagos sin contacto no están funcionando.,contactless_not_working,chat,2026-05-05T04:13+00:00
+¿Cómo me solicito una tarjeta si estoy en América?,country_support,email,2026-05-05T13:27+00:00
+¿Hay alguna razón por la que no se ha procesado mi recarga?,pending_top_up,chat,2026-05-05T21:49+00:00
+"Hice una transferencia bancaria, pero parece que no se ha realizado.",balance_not_updated_after_bank_transfer,phone,2026-05-06T23:56+00:00
+¿Cuántas recargas puedo usar?,top_up_limits,social,2026-05-07T09:09+00:00
+¿Cómo encuentro el PIN?,get_physical_card,phone,2026-05-07T11:30+00:00
+¿Cómo funciona una tarjeta virtual temporal?,get_disposable_virtual_card,email,2026-05-07T15:31+00:00
+¿Cómo cambio divisas usando esta app?,exchange_via_app,chat,2026-05-08T00:14+00:00
+¿Hay solo ciertos cajeros automáticos donde puedo usar esta tarjeta?,atm_support,email,2026-05-08T08:55+00:00
+¿Puedo activar una tarjeta en la aplicación?,card_linking,chat,2026-05-08T12:34+00:00
+¿Hay algún límite de recarga que debo seguir?,top_up_limits,phone,2026-05-08T14:30+00:00
+Transferí dinero pero el saldo no ha cambiado.,balance_not_updated_after_bank_transfer,email,2026-05-08T19:56+00:00
+Mi última transferencia parece estar faltando.,balance_not_updated_after_bank_transfer,chat,2026-05-09T02:23+00:00
+¡Alguien podría tener acceso a mi tarjeta! Hay algunos pagos extraños apareciendo en mi cuenta. ¿Qué debo hacer?,card_payment_not_recognised,web,2026-05-09T05:45+00:00
+¿Permiten cambiar la moneda que utilizo?,exchange_via_app,chat,2026-05-09T15:58+00:00
+¿Hay cargos por agregar dinero con una tarjeta internacional?,top_up_by_card_charge,email,2026-05-09T18:44+00:00
+¿Por qué se ha agregado otro cargo a mi estado de cuenta?,extra_charge_on_statement,branch,2026-05-10T02:59+00:00
+¿Puedo obtener una visa de usted?,visa_or_mastercard,email,2026-05-10T03:50+00:00
+¿Necesito volver a solicitar una tarjeta nueva cuando la antigua está a punto de expirar?,card_about_to_expire,phone,2026-05-10T10:06+00:00
+¿Puedes explicar más sobre por qué debo verificar mi identidad?,why_verify_identity,chat,2026-05-10T12:26+00:00
+¿Cuál es el límite diario en mi tarjeta?,top_up_limits,email,2026-05-10T14:16+00:00
+¿Por qué no puedo transferir dinero a mi cuenta?,transfer_into_account,chat,2026-05-11T03:49+00:00
+Me enviaste una tarjeta y ahora quiero vincularla.,card_linking,chat,2026-05-11T11:09+00:00
+Acabo de ver un cargo en mi cuenta. ¿Cuándo se cobraban estos cargos?,card_payment_fee_charged,branch,2026-05-11T14:05+00:00
+¿Qué opinas de la tasa de cambio?,exchange_rate,branch,2026-05-11T14:19+00:00
+"Necesito agregar más fondos a mi tarjeta hoy porque sigue siendo rechazada, y necesito usarla de inmediato. ¿Pueden solucionar esto o darme alternativas?",top_up_failed,web,2026-05-11T17:38+00:00
+¿Reinstalar la aplicación resolvería el problema?,contactless_not_working,chat,2026-05-11T21:58+00:00
+¿Pueden decirme sobre la tarifa de cambio de moneda?,exchange_charge,chat,2026-05-12T10:14+00:00
+"Hola. Intenté hacer una recarga y pensé que funcionó, pero ahora el dinero ya no está en mi cuenta. ¿Puedes explicar?",top_up_reverted,social,2026-05-13T15:21+00:00
+"Recibí la información de mi tarjeta virtual, pero no pude usarla para hacer una compra. ¿Por qué sucedió esto y qué puedo hacer?",virtual_card_not_working,email,2026-05-13T21:20+00:00
+Quiero obtener una visa.,visa_or_mastercard,web,2026-05-14T02:20+00:00
+¿Por qué no puedo usar este beneficiario?,beneficiary_not_allowed,email,2026-05-14T07:58+00:00
+Me gustaría saber dónde puedo pedir una tarjeta virtual.,getting_virtual_card,chat,2026-05-14T18:14+00:00
+"Cuando intenté hacer una transferencia, falló.",failed_transfer,chat,2026-05-15T01:09+00:00
+¿Puedo usar mi Apple Watch para llenar el tanque de gasolina?,apple_pay_or_google_pay,email,2026-05-15T11:17+00:00
+¿Cuál es el procedimiento para obtener más tarjetas en mi cuenta?,getting_spare_card,chat,2026-05-15T12:02+00:00
+¿Cómo recibo una tarjeta virtual temporal?,get_disposable_virtual_card,email,2026-05-15T14:08+00:00
+¿Qué tarifas se cobran por una tarjeta física?,order_physical_card,chat,2026-05-15T23:47+00:00
+Mi PIN no está funcionando.,pin_blocked,email,2026-05-16T03:21+00:00
+Pude encontrar mi tarjeta. ¿Cómo debo añadirla a mi aplicación?,card_linking,chat,2026-05-16T06:31+00:00
+Necesito información sobre cómo activar mi tarjeta.,activate_my_card,web,2026-05-16T22:52+00:00
+¿Por qué me están cobrando por sacar efectivo?,cash_withdrawal_charge,branch,2026-05-18T00:37+00:00
+¿Por qué está tardando tanto en completarse una transferencia?,transfer_not_received_by_recipient,branch,2026-05-18T02:05+00:00
+Mi tarjeta ha sido comprometida. Veo un montón de cargos por compras en línea que no hice. Necesito congelarla inmediatamente.,compromised_card,web,2026-05-18T09:10+00:00
+Tengo una emergencia y perdí mi teléfono. Necesito ayuda para acceder a mi cuenta.,lost_or_stolen_phone,chat,2026-05-18T12:20+00:00
+Ya recibí mi artículo pero recientemente me devolvieron mi dinero.,reverted_card_payment,email,2026-05-18T14:56+00:00
+¿Cómo puedo restablecer mi código de acceso?,passcode_forgotten,web,2026-05-19T04:36+00:00
+¿Cuál es el proceso para los cambios?,exchange_rate,email,2026-05-19T08:24+00:00
+"Realicé una transacción, pero la hice a una cuenta a la que no quería hacerla.",cancel_transfer,chat,2026-05-19T11:04+00:00
+¿Por qué me cobraron una tasa de cambio más alta cuando compré algo en el extranjero?,card_payment_wrong_exchange_rate,web,2026-05-20T09:42+00:00
+¿Cuáles son las tarifas por agregar fondos usando una tarjeta internacional?,top_up_by_card_charge,email,2026-05-20T21:28+00:00
+¿Cómo evito cargos en el futuro?,card_payment_fee_charged,web,2026-05-21T00:57+00:00
+"Necesito recargar, ¿puedo usar Google Pay?",apple_pay_or_google_pay,web,2026-05-21T14:01+00:00
+¿Cuál es la edad mínima para una cuenta?,age_limit,phone,2026-05-21T16:34+00:00
+¿Me dirias cómo se supone que debo usar las tarjetas temporales?,get_disposable_virtual_card,chat,2026-05-21T23:25+00:00
+¿Puedo recargar solo de manera digital? ¿O podría usar efectivo?,top_up_by_cash_or_cheque,chat,2026-05-22T00:49+00:00
+¿Qué tipos de monedas fiat se admiten para tener y hacer transacciones?,fiat_currency_support,branch,2026-05-22T01:26+00:00
+¿Está mi tarjeta denegada en algún lugar?,card_acceptance,email,2026-05-23T13:57+00:00
+¿Cómo añado dinero de mi tarjeta Amex para recargar?,supported_cards_and_currencies,chat,2026-05-23T14:13+00:00
+"Creo que mi tarjeta está por vencer, ¿qué pasa entonces?",card_about_to_expire,chat,2026-05-23T17:28+00:00
+Ayúdenme a activar mi tarjeta.,activate_my_card,chat,2026-05-23T20:13+00:00
+Mi pago no ha sido aceptado.,reverted_card_payment,chat,2026-05-23T23:30+00:00
+"Hola, hice una transferencia ayer que necesito revertir. Necesito poner el dinero en otra cuenta.",cancel_transfer,email,2026-05-24T01:06+00:00
+No estoy satisfecho con los servicios que están brindando. Me gustaría terminar mis servicios y eliminar mi cuenta.,terminate_account,email,2026-05-24T02:04+00:00
+¿Cuál es el tiempo de espera esperado para recibir mi nueva tarjeta?,card_arrival,chat,2026-05-24T03:11+00:00
+¿Hay una tarifa por completar la carga mediante transferencia?,top_up_by_bank_transfer_charge,email,2026-05-24T05:52+00:00
+No quiero una tarjeta VISA.,visa_or_mastercard,phone,2026-05-24T14:11+00:00
+¿Dónde pueden ser entregadas las tarjetas?,order_physical_card,chat,2026-05-25T03:14+00:00
+¿Me cobran por una recarga desde un banco europeo?,top_up_by_card_charge,chat,2026-05-26T10:59+00:00
+"Indicame, ¿cuántas tarjetas desechables puedo tener?",disposable_card_limits,chat,2026-05-26T13:42+00:00
+No recibí todo el efectivo en el cajero automático.,wrong_amount_of_cash_received,chat,2026-05-26T15:24+00:00
+¿Hay alguna manera de que pueda revisar mi saldo?,verify_source_of_funds,chat,2026-05-26T16:14+00:00
+"Debería tener un reembolso en mi estado de cuenta, pero no puedo verlo.",refund_not_showing_up,web,2026-05-27T03:41+00:00
+¿Tiene algún costo comprar algo de otro país? ¿Habrá tarifas ocultas de transferencia o tarifas de conversión de moneda?,transfer_fee_charged,email,2026-05-27T12:26+00:00
+¿Tienes un límite de edad?,age_limit,social,2026-05-28T03:23+00:00
+¿Cuál es la razón por la que la transferencia aparece como pendiente?,pending_transfer,branch,2026-05-28T06:22+00:00
+No puedo hacer ningún negocio con esta tarjeta virtual.,virtual_card_not_working,chat,2026-05-28T10:34+00:00
+¿Puedo configurarlo para agregar dinero automáticamente cada pocos días mientras estoy de viaje?,automatic_top_up,chat,2026-05-28T23:36+00:00
+¿En qué tiendas puedo comprar con esta tarjeta?,card_acceptance,web,2026-05-29T16:29+00:00
+¿Por qué no ha llegado mi tarjeta virtual todavía?,getting_virtual_card,branch,2026-05-30T03:19+00:00
+¿Dónde puedo encontrar un cajero automático?,atm_support,phone,2026-05-30T04:11+00:00
+¿Por qué no se muestra la transferencia que hice a un amigo?,transfer_not_received_by_recipient,email,2026-05-30T12:44+00:00
+¿Hay alguna manera de que puedas averiguar por qué se dedujo de mi cuenta un monto de un vendedor cuando no lo aprobé?,direct_debit_payment_not_recognised,web,2026-05-30T14:22+00:00
+¿Hay cajeros automáticos específicos que puedo usar con esta tarjeta?,atm_support,web,2026-05-30T14:41+00:00
+"No se ha procesado mi recarga, ¿qué pasó?",top_up_failed,email,2026-05-31T08:35+00:00
+Estaba tratando de comprar algo de cripto y la aplicación no me deja hacerlo. ¿Cuál es el problema con esto? Realmente quería completar el intercambio.,beneficiary_not_allowed,email,2026-06-01T05:52+00:00
+¿Verificar sporte para la tarjeta de recarga?,verify_top_up,social,2026-06-01T20:27+00:00
+¿Es sencillo transferir dinero usando mi tarjeta de crédito?,topping_up_by_card,phone,2026-06-02T01:29+00:00
+Quiero depositar mi cheque para recargar mi cuenta.,top_up_by_cash_or_cheque,web,2026-06-02T02:51+00:00
+¿Cómo recibo una tarjeta virtual?,getting_virtual_card,web,2026-06-02T18:05+00:00
+¿Por qué me cobraron un euro extra?,extra_charge_on_statement,branch,2026-06-02T22:36+00:00
+Creo que ha habido un error con mi transferencia.,declined_transfer,phone,2026-06-03T08:15+00:00
+¿A dónde debo ir para cambiar mi PIN?,change_pin,web,2026-06-03T13:36+00:00
+¿Puedo hacer recargas con Google Pay?,apple_pay_or_google_pay,chat,2026-06-03T16:40+00:00
+Veo un pago duplicado.,transaction_charged_twice,branch,2026-06-03T23:21+00:00
+Parece que el pago realizado con mi tarjeta podría haber sido revertido.,reverted_card_payment,email,2026-06-04T04:17+00:00
+¿Cómo es posible agregar otra tarjeta a la cuenta?,getting_spare_card,chat,2026-06-04T05:33+00:00
+¿Cuánto tiempo tomará una transferencia desde Europa?,transfer_timing,web,2026-06-05T01:01+00:00
+No estoy satisfecho con el servicio y me gustaría eliminar esta cuenta.,terminate_account,email,2026-06-05T02:38+00:00
+¿Cómo configuro mi tarjeta de crédito para enviar transferencias?,topping_up_by_card,web,2026-06-05T09:03+00:00
+¿Mi dinero tendrá el mismo valor cuando viaje al extranjero?,exchange_rate,email,2026-06-05T20:05+00:00
+"Solicité mi tarjeta, pero todavía no ha llegado.",card_arrival,web,2026-06-06T03:10+00:00
+¿Qué debo hacer después de mudarme y necesitar actualizar mis datos personales?,edit_personal_details,chat,2026-06-07T10:42+00:00
+¿La tarjeta es recibida por todos?,card_acceptance,phone,2026-06-07T12:03+00:00
+No puedo usar mi tarjeta porque no está funcionando.,card_not_working,social,2026-06-07T22:16+00:00
+¿Por qué no está verificada mi identidad?,unable_to_verify_identity,email,2026-06-07T23:51+00:00
+¿Puedo elegir cuándo se entrega mi tarjeta?,card_delivery_estimate,email,2026-06-08T08:59+00:00
+Compré algo en el extranjero y el tipo de cambio aplicado es incorrecto.,card_payment_wrong_exchange_rate,social,2026-06-08T09:42+00:00
+¿Puedo cambiar el PIN de mi tarjeta?,change_pin,chat,2026-06-09T19:09+00:00
+¿Cómo puedo solicitar una tarjeta virtual?,getting_virtual_card,email,2026-06-09T19:13+00:00
+Necesito revertir una transacción.,cancel_transfer,branch,2026-06-11T03:51+00:00
+¿Qué tan recientes deben ser mis documentos para la verificación?,verify_my_identity,web,2026-06-11T06:54+00:00
+"He encontrado mi tarjeta perdida o robada, ¿tendría que activar la nueva tarjeta que me enviaron por correo para poder acceder a mi cuenta?",card_linking,phone,2026-06-11T12:28+00:00
+¿Cuánto tiempo tarda una transferencia en llegar a la cuenta de uno?,transfer_timing,web,2026-06-11T18:35+00:00
+Falta dinero en mi cuenta.,cash_withdrawal_not_recognised,social,2026-06-11T21:41+00:00
+"Hola, intenté retirar algo de dinero de un cajero automático y la máquina estaba rota. Dice que la transacción aún está en progreso. ¿Puedes verificar para ver qué está pasando? No quiero que me cobren ya que no pude retirar el dinero.",pending_cash_withdrawal,email,2026-06-12T05:59+00:00
+¿Por qué usar una tarjeta temporal?,get_disposable_virtual_card,email,2026-06-12T13:30+00:00
+¿Por qué hay un cargo adicional de una libra que está pendiente?,extra_charge_on_statement,web,2026-06-12T19:51+00:00
+"Necesito hacer una transferencia, pero sigue siendo rechazada. ¡Necesito ayuda!",declined_transfer,web,2026-06-12T21:48+00:00
+Estaba retirando una cantidad en dólares de mi cuenta y ahora no tengo acceso a mi tarjeta.,card_swallowed,email,2026-06-12T22:59+00:00
+¿Qué pasa si uso mi cuenta y mi verificación de identidad no ha terminado?,why_verify_identity,chat,2026-06-13T00:18+00:00
+Intenté transferir fondos a un beneficiario y fue denegado. ¿Puedes decirme por qué?,beneficiary_not_allowed,chat,2026-06-13T00:59+00:00
+¿Cuáles son las monedas y tarjetas que son compatibles con mi cuenta?,supported_cards_and_currencies,chat,2026-06-13T09:18+00:00
+Creo que algo salió mal con mi cambio de moneda entre rublos rusos y libras esterlinas. Me cobraron de más durante el cambio.,card_payment_wrong_exchange_rate,chat,2026-06-13T12:34+00:00
+¿Cómo puedo verificar mi fuente de fondos?,verify_source_of_funds,chat,2026-06-14T05:22+00:00
+Mi declaración no refleja que se haya emitido un reembolso.,refund_not_showing_up,chat,2026-06-14T22:53+00:00
+¿Está rota mi tarjeta? No puedo sacar dinero del cajero automático.,declined_cash_withdrawal,chat,2026-06-14T23:23+00:00
+Hay un pago en la aplicación que no hice.,card_payment_not_recognised,email,2026-06-15T07:11+00:00
+Estaba revisando mi estado de cuenta y creo que uno de mis pagos con tarjeta se ha revertido.,reverted_card_payment,web,2026-06-16T19:04+00:00
+¿Por qué no se ve mi reembolso en mi estado de cuenta?,refund_not_showing_up,web,2026-06-17T07:35+00:00
+¿Es mi hija elegible para abrir una cuenta?,age_limit,chat,2026-06-17T11:31+00:00
+¿Es posible acceder a mi teléfono desde el hotel?,lost_or_stolen_phone,phone,2026-06-17T22:34+00:00
+¿Cómo abro una cuenta para mis hijos?,age_limit,branch,2026-06-17T23:25+00:00
+Sospecho que alguien usó mi tarjeta.,compromised_card,branch,2026-06-18T19:10+00:00
+dime cómo obtener un reembolso por algo que compré.,request_refund,chat,2026-06-19T04:32+00:00
+Ayer me robaron el teléfono :( ¿Qué debo hacer al respecto?,lost_or_stolen_phone,phone,2026-06-19T11:35+00:00
+La aplicación muestra pagos de débito directo que no realicé.,direct_debit_payment_not_recognised,chat,2026-06-19T17:58+00:00
+¿Puedes decirme cuánto tiempo tarda en estar disponible la transferencia?,transfer_timing,branch,2026-06-19T19:29+00:00
+¿Es aceptable usar Visa o Mastercard?,visa_or_mastercard,email,2026-06-20T01:11+00:00
+¿Qué debo hacer para verificar mi fuente de fondos?,verify_source_of_funds,web,2026-06-20T03:47+00:00
+¿Por qué hubo una tarifa en mi retiro de efectivo?,cash_withdrawal_charge,web,2026-06-20T05:22+00:00
+¿Por qué no aparece el efectivo en mi cuenta por el cheque que deposité?,balance_not_updated_after_cheque_or_cash_deposit,web,2026-06-20T09:52+00:00
+Necesito dos tarjetas. ¿Es posible?,getting_spare_card,email,2026-06-20T13:06+00:00
+Mi contactless no funciona.,contactless_not_working,web,2026-06-20T19:55+00:00
+Razones para la cancelación de recargas.,top_up_reverted,chat,2026-06-21T10:25+00:00
+"Pensé que la recarga de cripto era algo que ofrecías y no parece que esté funcionando, aunque el dinero ha desaparecido de mi cuenta. ¿Puedes decirme qué está pasando?",top_up_reverted,web,2026-06-21T18:53+00:00
+¿Por qué me bloquearon por ingresar códigos PIN incorrectos?,pin_blocked,chat,2026-06-22T01:03+00:00
+"Si perdí mi teléfono, ¿qué pasos debo seguir para evitar que alguien use mi cuenta?",lost_or_stolen_phone,branch,2026-06-22T02:44+00:00
+¿Cómo pido otra tarjeta?,getting_spare_card,email,2026-06-22T03:23+00:00
+¡Mi tarjeta virtual aún no ha llegado!,getting_virtual_card,email,2026-06-22T09:26+00:00
+Noté que mi tasa de cambio estaba incorrecta cuando saqué dinero en efectivo.,wrong_exchange_rate_for_cash_withdrawal,email,2026-06-23T17:57+00:00
+No tengo un PIN.,get_physical_card,phone,2026-06-23T18:13+00:00
+¿Por qué se ha rechazado mi tarjeta?,declined_card_payment,phone,2026-06-23T19:30+00:00
+¿Es suficiente un cheque?,top_up_by_cash_or_cheque,web,2026-06-24T03:39+00:00
+Mi tarjeta se quedó atrapada en un cajero automático.,card_swallowed,email,2026-06-24T12:17+00:00
+¿Qué está pasando con mi depósito en efectivo? Estoy revisando el saldo de mi cuenta y no está allí. Ha pasado casi una semana. Alguien debe responderme lo antes posible.,balance_not_updated_after_cheque_or_cash_deposit,web,2026-06-24T22:58+00:00
+No estoy seguro de dónde está mi teléfono.,lost_or_stolen_phone,chat,2026-06-25T02:17+00:00
+Necesito cambiar mis datos.,edit_personal_details,web,2026-06-25T06:12+00:00
+Alguien tomó mi tarjeta sin permiso.,lost_or_stolen_card,phone,2026-06-25T18:27+00:00
+No he recibido dinero de una transferencia.,transfer_not_received_by_recipient,chat,2026-06-25T20:59+00:00
+¿Para qué son las tarjetas temporales?,get_disposable_virtual_card,email,2026-06-25T22:52+00:00
+"He estado esperando algo que he pedido desde hace meses y todavía no ha llegado. Sinceramente, no sé qué está haciendo esta empresa, pero en términos simples, he tenido suficiente. Por favor, emitan un reembolso de inmediato, no quisiera perder más tiempo con estas personas.",request_refund,chat,2026-06-26T16:18+00:00
+Mi aplicación muestra un pago que no hice.,card_payment_not_recognised,email,2026-06-27T21:34+00:00
+¿Qué tengo que hacer para que funcione la tarjeta virtual?,virtual_card_not_working,email,2026-06-28T00:47+00:00
+¿Cuáles son los requisitos para verificar mi identidad?,verify_my_identity,web,2026-06-28T09:55+00:00
+"Alguien está usando mi tarjeta para comprar vuelos a Nueva York, no soy yo porque no voy a Nueva York, por favor, ¿pueden cancelar la tarjeta y devolver el dinero?",cash_withdrawal_not_recognised,web,2026-06-28T12:37+00:00
+Mi tarjeta rechazó un retiro de efectivo. ¿Por qué?,declined_cash_withdrawal,web,2026-06-28T16:12+00:00
+¿Cuáles son los cargos adicionales para todas las tarjetas de EE. UU.?,top_up_by_card_charge,chat,2026-06-29T06:14+00:00
+"Mi tarjeta está mostrando una cuota de cuando la usé, pero pensé que se suponía que esta tarjeta era sin tarifa.",card_payment_fee_charged,web,2026-06-29T09:35+00:00
+¿Dónde está el dinero que transfirí?,balance_not_updated_after_bank_transfer,phone,2026-06-29T11:08+00:00
+No cargué mi cuenta para esta transacción. Esto es un error.,card_payment_not_recognised,chat,2026-06-30T08:11+00:00
+"Algo está mal, mi tarjeta no funciona.",card_not_working,email,2026-06-30T14:59+00:00
+¿Está disponible una opción de recarga automática?,automatic_top_up,chat,2026-07-01T14:13+00:00
+No estoy seguro de qué necesito para verificar mi identidad.,verify_my_identity,chat,2026-07-03T04:26+00:00
+Me cobraron una tarifa al pagar con mi tarjeta.,card_payment_fee_charged,email,2026-07-03T13:20+00:00
+Quiero activar la tarjeta.,activate_my_card,chat,2026-07-03T14:21+00:00
+¿TENGO que tener 18 años para abrir una cuenta?,age_limit,web,2026-07-03T16:51+00:00
+¿Puedes decirme por qué mi transferencia está fallando y ayudar a resolverlo?,failed_transfer,email,2026-07-04T04:46+00:00
+¿En qué nivel se encuentra el tipo de cambio en este momento?,exchange_rate,phone,2026-07-04T07:33+00:00
+¡Estoy en pánico! ¡Perdí mi tarjeta! ¡Ayuda!,lost_or_stolen_card,web,2026-07-04T15:21+00:00
+¿Qué necesito llevar conmigo para activar la tarjeta?,activate_my_card,web,2026-07-04T17:41+00:00
+Verificar la recarga parece ser engorroso.,verify_top_up,social,2026-07-04T19:08+00:00
+¿Cuáles son mis opciones para tener dinero en múltiples monedas?,fiat_currency_support,web,2026-07-04T22:09+00:00
+¿Puedo recibir una tarjeta enviada a China?,card_about_to_expire,phone,2026-07-05T03:56+00:00
+¿Qué debo hacer si el cajero automático se tragó mi tarjeta?,card_swallowed,branch,2026-07-05T04:29+00:00
+Mi aplicación dice que no se me ha verificado.,unable_to_verify_identity,branch,2026-07-05T18:17+00:00
+Logré bloquear mi tarjeta ebrio :(( ¡Ayuda!,pin_blocked,chat,2026-07-06T01:58+00:00
+¿De dónde debo retirar dinero?,atm_support,phone,2026-07-06T06:29+00:00
+¿Puedo usar una transferencia para recibir mi transferencia?,receiving_money,chat,2026-07-06T12:51+00:00
+He intentado usar mi tarjeta sin contacto en varios lugares hoy y no está funcionando en ningún sitio. Parecía estar bien antes. ¿Cómo puedo hacer que funcione de nuevo?,contactless_not_working,web,2026-07-06T18:06+00:00
+¿Por qué no funcionó mi pago con tarjeta?,declined_card_payment,chat,2026-07-06T21:46+00:00
+¿Dónde puedo encontrar el código de verificación para una recarga?,verify_top_up,chat,2026-07-06T23:12+00:00
+¿Dónde puedo usar una tarjeta desechable?,disposable_card_limits,chat,2026-07-08T01:21+00:00
+Estoy teniendo problemas con una recarga.,top_up_failed,chat,2026-07-08T06:30+00:00
+¿Qué monedas puedo usar para agregar dinero?,supported_cards_and_currencies,phone,2026-07-08T08:04+00:00
+¡Se cobró una libra extra!,extra_charge_on_statement,chat,2026-07-08T11:42+00:00
+¿Te cobrarán por una tarjeta física?,order_physical_card,email,2026-07-08T13:31+00:00
+¿Puedo restablecer el código de acceso?,passcode_forgotten,chat,2026-07-08T13:40+00:00
+Ya no quiero mantener esta cuenta.,terminate_account,email,2026-07-08T16:56+00:00
+"Esto es terrible, quiero eliminar mi cuenta.",terminate_account,chat,2026-07-08T21:23+00:00
+¿Tienes una función de auto-top y cómo la uso si es así?,automatic_top_up,web,2026-07-08T21:57+00:00
+¿Puedo obtener una tarjeta virtual temporal también?,get_disposable_virtual_card,phone,2026-07-09T01:54+00:00
+¿Por qué no aparece mi reembolso en el estado de cuenta?,refund_not_showing_up,chat,2026-07-09T02:15+00:00
+¿Puedes por favor avisarme si hay algo mal con mi tarjeta? He tenido múltiples rechazos y no sé la razón. ¡Gracias!,declined_card_payment,chat,2026-07-10T04:15+00:00
+¿Cómo vinculo una nueva tarjeta en la app?,card_linking,branch,2026-07-10T12:34+00:00
+¿Cuándo recibiré el PIN de mi tarjeta?,get_physical_card,chat,2026-07-10T20:05+00:00
+"La app dice que retiré dinero de un cajero automático, pero no lo hice.",cash_withdrawal_not_recognised,phone,2026-07-11T00:26+00:00
+Tengo una transferencia esperando.,pending_transfer,chat,2026-07-11T00:44+00:00
+Pago con tarjeta aún pendiente.,pending_card_payment,web,2026-07-11T11:38+00:00
+¿Cómo hago para pedir mi tarjeta?,order_physical_card,email,2026-07-11T12:57+00:00
+"Metí la pata y usé la cuenta equivocada. Por favor, ayúdame.",cancel_transfer,chat,2026-07-12T16:07+00:00
+"¿Cuánto tiempo tarda la transferencia de la UE? Compré algo en línea hace un par de días, envié el dinero de inmediato en línea, pero el vendedor dice que aún no ha llegado.",pending_transfer,phone,2026-07-13T16:55+00:00
+¿Por qué no se ha procesado el pago aún?,pending_card_payment,chat,2026-07-13T20:31+00:00
+¿Cómo hago para que esta maldita tarjeta virtual funcione?,virtual_card_not_working,chat,2026-07-13T23:07+00:00
+¿Puedo obtener una tarjeta si vivo en los EE. UU.?,country_support,chat,2026-07-14T07:23+00:00
+Accidentalmente hice un pago a una cuenta equivocada. ¿Qué debo hacer?,cancel_transfer,web,2026-07-14T14:50+00:00
+¿Qué debo hacer ahora que mi tarjeta de crédito ha sido tragada por el cajero automático?,card_swallowed,web,2026-07-14T23:11+00:00
+¿En qué cajeros automáticos puedo usar mi tarjeta?,atm_support,phone,2026-07-15T07:32+00:00
+"Hola, he estado tratando de recargar sin éxito mi tarjeta durante todo el día. ¡Necesito que se recargue con urgencia! ¿Alguien puede comunicarse conmigo para resolver esto o explicarme otras formas de recargar mi tarjeta?",top_up_failed,web,2026-07-15T09:22+00:00
+"No sé qué pasó, pero mi pago fue cancelado.",reverted_card_payment,chat,2026-07-15T13:59+00:00
+¿Necesito mi teléfono para usar la aplicación?,lost_or_stolen_phone,web,2026-07-15T14:52+00:00
+"Me he mudado a una nueva casa y he establecido un pago de renta a mi arrendadora; se suponía que debía estar en su cuenta hace unos días, pero no ha llegado. Definitivamente lo envié a la cuenta correcta, ¿puedes confirmar dónde está el dinero?",transfer_not_received_by_recipient,chat,2026-07-15T21:07+00:00
+¿Sólo se puede obtener una tarjeta si estás en el Reino Unido?,country_support,email,2026-07-15T21:42+00:00
+¿Por qué falló mi pago?,declined_card_payment,chat,2026-07-16T07:03+00:00
+Me gustaría cancelar una transferencia... ¿es posible?,cancel_transfer,chat,2026-07-16T11:53+00:00
+Estoy tratando de usar mi Apple Watch para recargar mi Google Pay. ¿Necesito una aplicación especial?,apple_pay_or_google_pay,web,2026-07-16T21:44+00:00
+Mi tarjeta virtual desechable no está funcionando.,virtual_card_not_working,web,2026-07-17T05:18+00:00
+¿Hay un número al que pueda llamar para desbloquear mi PIN?,pin_blocked,email,2026-07-17T08:04+00:00
+¿Cómo desactivo una tarjeta robada?,lost_or_stolen_card,email,2026-07-17T19:44+00:00
+¿Qué monedas fiduciarias son compatibles para tener hacer intercambios?,fiat_currency_support,chat,2026-07-17T21:55+00:00
+"Hice una transferencia y el receptor dijo que en realidad no ha recibido la cantidad correcta, sino un poco menos. Ahora tengo que transferir más dinero para compensar la falta. ¿Puedes avisarme sobre esto, qué ha estado pasando?",transfer_fee_charged,phone,2026-07-18T16:25+00:00
+Parece que no puedo realizar ninguna transacción.,card_not_working,chat,2026-07-18T22:18+00:00
+"Por favor, hágame saber cómo cambiar mi PIN.",change_pin,chat,2026-07-19T00:30+00:00
+¿Las tarjetas están disponibles para aquellos fuera del Reino Unido?,country_support,chat,2026-07-19T01:58+00:00
+¿Puedes ayudarme a comprobar mi identidad?,unable_to_verify_identity,email,2026-07-19T04:51+00:00
+¿Hay restricciones sobre dónde puedo usar mi tarjeta?,card_acceptance,chat,2026-07-19T09:48+00:00
+¿Mi tarjeta de crédito es aceptada para recargas?,supported_cards_and_currencies,email,2026-07-19T10:11+00:00
+Quiero usar efectivo para recargar.,top_up_by_cash_or_cheque,web,2026-07-19T12:22+00:00
+¿Por qué veo una tarifa cuando hago una transferencia?,transfer_fee_charged,branch,2026-07-19T17:24+00:00
+¿Cuánto tiempo tarda la entrega?,card_delivery_estimate,phone,2026-07-19T23:44+00:00
+"Parece que mi pago con tarjeta se realizó dos veces por error. Fui a pagar en la tienda antes, lo rechazaron una vez y la segunda vez funcionó. La aplicación está en espera por uno de los pagos. ¿Puedes, por favor, eliminar uno de ellos ya que es incorrecto y claramente fue rechazado?",transaction_charged_twice,chat,2026-07-20T00:24+00:00
+¿Hay alguna forma de recuperar mi contraseña?,passcode_forgotten,chat,2026-07-20T07:23+00:00
+"Los detalles de mi tarjeta podrían haber sido robados, ya que no hice estas transacciones.",compromised_card,chat,2026-07-20T08:49+00:00
+Mi tarjeta aún no ha sido entregada.,card_arrival,email,2026-07-20T12:34+00:00
+¿Cómo se pueden utilizar las tarjetas temporales?,get_disposable_virtual_card,chat,2026-07-20T19:44+00:00
+¿Puedo obtener mi tarjeta de forma acelerada?,card_delivery_estimate,chat,2026-07-20T20:23+00:00
+¿Por qué no se aceptó mi contacto en el metro?,contactless_not_working,web,2026-07-21T01:19+00:00
+"Solo recibí $20, pero solicité $100.",wrong_amount_of_cash_received,email,2026-07-21T01:32+00:00
+Parece que mi recarga falló.,top_up_failed,email,2026-07-21T14:02+00:00
+¿Cómo sabré de dónde provienen mis fondos?,verify_source_of_funds,web,2026-07-22T11:54+00:00
+"¿Cuánto tiempo tardan las transferencias de dinero? Mi amigo realmente necesita el dinero que envié hace un par de horas, pero aún no ha llegado.",transfer_not_received_by_recipient,web,2026-07-22T12:30+00:00
+"¿Perdieron mi dinero? Había agregado fondos a través de recarga no hace mucho y sé que estaban en mi cuenta, pero parecen haber desaparecido. ¿Qué pasó?",top_up_reverted,phone,2026-07-22T16:53+00:00
+Dime por qué se rechazó mi transferencia.,declined_transfer,phone,2026-07-23T01:28+00:00
+¿Cómo soluciono problemas cuando la tarjeta sin contacto no funciona?,contactless_not_working,web,2026-07-23T02:41+00:00
+¿Cuál es la cantidad máxima de recargas?,top_up_limits,branch,2026-07-23T03:20+00:00
+Necesito otra tarjeta para un miembro de mi familia. ¿Es posible? ¿Cuánto tiempo tardaré en obtener una?,getting_spare_card,chat,2026-07-23T06:04+00:00
+¿Por qué es diferente el tipo de cambio en mi compra reciente?,card_payment_wrong_exchange_rate,chat,2026-07-23T12:54+00:00
+¿Puedo pedir una tarjeta nueva a China?,card_about_to_expire,web,2026-07-23T13:03+00:00
+¿Cuál es el proceso para crear una tarjeta virtual temporal?,get_disposable_virtual_card,chat,2026-07-24T03:28+00:00
+"En mi tarjeta desechable, ¿hay un límite de transacción?",disposable_card_limits,email,2026-07-24T12:10+00:00
+¿Qué es una tarjeta virtual y cómo obtengo una?,getting_virtual_card,phone,2026-07-24T13:18+00:00
+¿Puedo usar una moneda diferente con mi salario?,receiving_money,branch,2026-07-24T20:09+00:00
+¿Cómo puedo agregar dinero automáticamente?,automatic_top_up,chat,2026-07-25T02:36+00:00
+¿Por qué se detuvo mi transferencia?,beneficiary_not_allowed,branch,2026-07-25T08:44+00:00
+"Hola, he retirado efectivo del cajero automático en vacaciones y supongo que el monto del retiro ha sido cobrado de más. Lo hice ya que no estaba al tanto de estos cargos.",wrong_exchange_rate_for_cash_withdrawal,email,2026-07-25T10:09+00:00
+¿Cómo empiezo el proceso de un reembolso?,request_refund,web,2026-07-25T10:21+00:00
+Hice mi pedido hace una semana. ¿Está bien que mi tarjeta aún no esté aquí?,card_delivery_estimate,web,2026-07-25T12:35+00:00
+Necesito saber qué cargos tendré al usar una tarjeta europea para recargar.,top_up_by_card_charge,chat,2026-07-25T13:23+00:00
+¿Cuáles son los pasos necesarios para recargar con Apple Pay?,apple_pay_or_google_pay,web,2026-07-26T05:35+00:00
+"Por favor, dime cómo cambiar mi PIN.",change_pin,web,2026-07-26T09:30+00:00
+Me gustaría recibir un reembolso por algo que compré.,request_refund,email,2026-07-26T11:57+00:00
+¿Cuál es el máximo para recargas?,top_up_limits,web,2026-07-27T20:07+00:00
+La aplicación no puede verificar mi información para fines de prueba de identidad.,unable_to_verify_identity,chat,2026-07-28T11:24+00:00
+"¿Cuál es la cantidad máxima que puedo recargar a mi tarjeta, por favor?",top_up_limits,web,2026-07-28T14:41+00:00
+"¿Por qué me están cobrando por los retiros de efectivo en cajeros automáticos? La única razón por la que lo uso es porque ha sido gratis. ¡Ahora esperan que pague por eso, y cuánto me va a costar?",cash_withdrawal_charge,email,2026-07-29T18:02+00:00
+Terminé mi transferencia. Tengo un problema con ella que todavía está pendiente. Ha pasado mucho tiempo y me estoy impacientando.,pending_transfer,chat,2026-07-30T00:34+00:00
+¿Cómo se envía mi PIN?,get_physical_card,chat,2026-07-30T11:59+00:00
+¿Por qué se habría devuelto mi pago a mi cuenta?,reverted_card_payment,web,2026-07-30T19:43+00:00
+¿Dónde puedo encontrar el código de verificación de la tarjeta de recarga?,verify_top_up,email,2026-07-30T20:19+00:00
+Tengo un débito directo que no configuré.,direct_debit_payment_not_recognised,web,2026-07-30T21:45+00:00
+¿Por qué siguen siendo rechazadas mis transferencias y compras?,declined_transfer,chat,2026-07-31T05:47+00:00
+¿Cuál es el tipo de cambio actual?,exchange_rate,chat,2026-07-31T09:18+00:00
+¿Qué puedo hacer si mi tarjeta aún no ha llegado después de 2 semanas?,card_arrival,phone,2026-07-31T16:34+00:00
+Hay un pago que aparece como pendiente y no se ha registrado durante unos días. ¿Cuándo se registrará?,pending_card_payment,email,2026-07-31T18:44+00:00
+¿De dónde provienen tus tasas de cambio?,exchange_rate,email,2026-08-01T01:57+00:00
+Mi recarga no está funcionando. ¿Por qué es eso?,top_up_failed,web,2026-08-01T02:40+00:00
+¿Hay alguna razón por la que mi pago aún esté pendiente?,pending_card_payment,chat,2026-08-01T09:33+00:00
+¿Por qué no ha llegado aún mi transferencia de dinero?,balance_not_updated_after_bank_transfer,chat,2026-08-01T12:04+00:00
+¿Dónde se pueden hacer retiros de dinero?,atm_support,web,2026-08-01T12:25+00:00
+Tu tipo de cambio estaba incorrecto. Me cobraron extra en el pago que hice el sábado pasado.,card_payment_wrong_exchange_rate,branch,2026-08-01T16:45+00:00
+Anteayer transferí fondos a otra cuenta dentro del país. Los fondos aún no han llegado. Verifiqué el número de cuenta dos y tres veces y era correcto. ¿Por qué no se ha completado la transferencia aún?,transfer_not_received_by_recipient,web,2026-08-01T18:11+00:00
+¿Puedes decirme en qué países operan?,country_support,social,2026-08-02T14:47+00:00
+¿Cómo configuro el PIN de mi tarjeta física?,get_physical_card,chat,2026-08-03T06:29+00:00
+¿Cuál sería el límite de edad?,age_limit,web,2026-08-03T12:45+00:00
+¿Por qué demonios es tan malo el tipo de cambio? ¿Puedo obtener un tipo más cercano al tipo interbancario actual?,card_payment_wrong_exchange_rate,chat,2026-08-03T13:08+00:00
+¿Tiempo estimado de llegada para las transferencias?,transfer_timing,email,2026-08-03T18:09+00:00
+€1 estaba en mi estado de cuenta como un cargo adicional.,extra_charge_on_statement,chat,2026-08-04T05:26+00:00
+¿Hay alguna manera de recibir mi salario en una moneda diferente?,receiving_money,web,2026-08-04T14:15+00:00
+¿Debería agregar dinero mediante transferencia bancaria?,top_up_by_card_charge,web,2026-08-04T17:51+00:00
+¿Cómo verifico mi recarga?,verify_top_up,email,2026-08-05T01:52+00:00
+"Ingresé la información incorrecta, necesito que desbloqueen mi cuenta. ¿Cómo hago eso?",pin_blocked,web,2026-08-05T11:21+00:00
+¿Habrá un costo si cambio divisas?,exchange_charge,chat,2026-08-05T18:40+00:00
+¿Puedo recargar en línea?,top_up_by_cash_or_cheque,web,2026-08-06T02:47+00:00
+"Hola, estoy parado frente a un cajero automático aquí, solo me dio 10 libras aunque quería retirar 30. ¡Parece que la app tiene 30 libras, ¿qué hago??!",wrong_amount_of_cash_received,email,2026-08-06T16:25+00:00
+¿Cómo edito mis datos?,edit_personal_details,web,2026-08-06T21:08+00:00
+El tipo de cambio para mi compra en moneda extranjera es incorrecto.,card_payment_wrong_exchange_rate,chat,2026-08-07T02:28+00:00
+El cajero automático canceló una transacción cuando estaba tratando de sacar dinero.,declined_cash_withdrawal,chat,2026-08-07T06:01+00:00
+¿Dónde puedo registrarme para una tarjeta virtual?,getting_virtual_card,email,2026-08-07T11:41+00:00
+"Me gustaría obtener una tarjeta física, pero no sé cómo. ¿Puedes ayudarme?",order_physical_card,social,2026-08-07T17:25+00:00
+"Hola, soy un nuevo cliente y acabo de intentar recargar por primera vez. Según su información, la transacción debería ser instantánea, ¿por qué aún aparece como pendiente?",pending_top_up,chat,2026-08-07T21:44+00:00
+¿Puedo cambiar mi PIN en Austria?,change_pin,email,2026-08-07T23:35+00:00
+¿Qué debo hacer si creo que me robaron la tarjeta?,lost_or_stolen_card,chat,2026-08-08T12:18+00:00
+¿Cómo puedo cambiar el tipo de moneda?,exchange_via_app,chat,2026-08-09T09:53+00:00
+No me siento cómodo verificando mi identidad.,why_verify_identity,chat,2026-08-10T04:56+00:00
+¿Hay tarifas por usar una tarjeta internacional para recargar?,top_up_by_card_charge,web,2026-08-10T06:26+00:00
+Hay cargos fraudulentos que no hice en mi tarjeta. ¿Puede por favor implementar las medidas de seguridad necesarias para evitar que esto vuelva a suceder?,compromised_card,chat,2026-08-11T23:22+00:00
+¿Cómo inicio una transferencia bancaria para recargar?,transfer_into_account,chat,2026-08-12T02:01+00:00
+¿Cuánto tiempo toma verificar mi identidad?,unable_to_verify_identity,chat,2026-08-13T17:47+00:00
+¿Cómo puedo cambiar mi nombre en mi perfil?,edit_personal_details,web,2026-08-14T21:46+00:00
+Expliquen el método de activación para esta tarjeta.,activate_my_card,social,2026-08-15T07:20+00:00
+¿Cuál es el procedimiento para obtener una tarjeta?,order_physical_card,chat,2026-08-15T14:41+00:00
+¿Puede alguien ayudarme explicandome cómo puedo desbloquear mi pin?,pin_blocked,chat,2026-08-16T00:45+00:00
+¿Qué causó que mi transferencia fallara?,failed_transfer,phone,2026-08-16T06:03+00:00
+¿Puedes investigar por qué mi recarga más reciente aparece como pendiente? Pensé que debía ser instantánea.,pending_top_up,phone,2026-08-16T07:28+00:00
+Hay un cargo extraño en el estado de mi cuenta débito.,direct_debit_payment_not_recognised,email,2026-08-16T14:43+00:00
+La aplicación dice que saqué dinero en un cajero automático y no lo hice.,cash_withdrawal_not_recognised,email,2026-08-16T16:40+00:00
+No recuerdo mi código de acceso.,passcode_forgotten,chat,2026-08-16T17:17+00:00
+"Recientemente compré algo en el extranjero, pero el tipo de cambio es incorrecto. ¿Por qué?",card_payment_wrong_exchange_rate,email,2026-08-17T08:57+00:00
+"El cajero automático está mostrando que me dio el dinero que solicité, pero no recibí esa cantidad.",wrong_amount_of_cash_received,web,2026-08-17T20:31+00:00
+¿Puedes proporcionar información para congelar mi tarjeta de inmediato?,lost_or_stolen_card,web,2026-08-17T22:11+00:00
+¿Cuánto tiempo estará pendiente mi recarga?,pending_top_up,email,2026-08-18T11:43+00:00
+Quiero transferir algo de dinero de mi otra cuenta bancaria a esta.,transfer_into_account,branch,2026-08-18T23:36+00:00
+¿Puede mi hija crear una cuenta?,age_limit,web,2026-08-18T23:55+00:00
+No tengo un PIN en este momento.,get_physical_card,web,2026-08-19T17:11+00:00
+Hay un retiro en mi cuenta que no recuerdo haber iniciado.,cash_withdrawal_not_recognised,phone,2026-08-19T17:12+00:00
+Intenté hacer un pago con mi tarjeta y fue rechazada. ¿Por qué está pendiente?,pending_card_payment,chat,2026-08-20T11:29+00:00
+Hay un par de pagos con mi tarjeta que aparecen en la aplicación que en realidad no hice. ¿Quizás alguien tiene acceso a mi tarjeta? ¿Puedes verificar cuál es el problema?,card_payment_not_recognised,branch,2026-08-22T03:36+00:00
+¿Por qué mi pago con tarjeta aún aparece como pendiente?,pending_card_payment,web,2026-08-22T08:04+00:00
+¿Por qué se requiere verificar mi identidad?,why_verify_identity,social,2026-08-22T10:05+00:00
+¿Por qué no se ha procesado mi cheque?,balance_not_updated_after_cheque_or_cash_deposit,chat,2026-08-22T17:54+00:00
+¿Por qué necesitas mi nombre y mi identificación?,why_verify_identity,chat,2026-08-23T01:38+00:00
+¿Cómo uso efectivo para recargar mi cuenta?,top_up_by_cash_or_cheque,chat,2026-08-23T08:42+00:00
+¿Por qué tengo que verificar mi tarjeta de recarga?,verify_top_up,branch,2026-08-23T13:49+00:00
+¿Apoyas las monedas fiduciarias?,fiat_currency_support,email,2026-08-23T17:44+00:00
+Mi transferencia falló cuando intenté.,failed_transfer,email,2026-08-23T23:10+00:00
+¿Hay un máximo para las recargas?,top_up_limits,phone,2026-08-24T04:10+00:00
+"Hay algunos pagos con tarjeta que no he realizado yo mismo. ¿Qué está pasando con mi tarjeta, alguien más tiene acceso a mi tarjeta?",card_payment_not_recognised,email,2026-08-24T12:51+00:00
+Solicité un reembolso pero aún no está aquí.,refund_not_showing_up,chat,2026-08-24T13:03+00:00
+"Por favor ayúdame, ya que el monto de mi recarga ha sido revertido, lo hice correctamente. Creo que hay algún defecto en el sistema.",top_up_reverted,email,2026-08-24T14:43+00:00
+Mi paquete está tardando demasiado en llegar y ya no lo quiero. ¿Puedo obtener un reembolso?,request_refund,web,2026-08-24T18:54+00:00
+¿Cuándo se envían las tarjetas?,card_delivery_estimate,web,2026-08-24T22:50+00:00
+He olvidado mi código de acceso.,passcode_forgotten,chat,2026-08-25T00:35+00:00
+Quería saber por qué mi transacción no se completó.,declined_transfer,chat,2026-08-25T05:00+00:00
+¿Cómo sé cuándo vencerá mi tarjeta?,card_about_to_expire,chat,2026-08-25T05:22+00:00
+"Mi billetera no muestra mi recarga, ¿hice algo mal?",topping_up_by_card,chat,2026-08-26T03:25+00:00
+¿Por qué no se puede verificar mi identificación?,unable_to_verify_identity,web,2026-08-26T04:13+00:00
+"¡Intenté comprar gasolina, pero mi dinero se había acabado!",topping_up_by_card,chat,2026-08-26T14:08+00:00
+Una tasa de cambio incorrecta se aplicó a mi retiro de efectivo.,wrong_exchange_rate_for_cash_withdrawal,phone,2026-08-26T15:20+00:00
+¿Por qué me cobrarían una tarifa adicional al hacer una transferencia?,transfer_fee_charged,chat,2026-08-26T22:14+00:00
+"No estoy seguro, pero alguien más podría estar usando mi tarjeta.",compromised_card,chat,2026-08-27T07:38+00:00
+Mi transferencia aún está pendiente.,pending_transfer,chat,2026-08-27T08:15+00:00
+¿Puedo usar mi sueldo para esto?,receiving_money,chat,2026-08-27T08:45+00:00
+¿Dónde se puede usar mi tarjeta?,card_acceptance,web,2026-08-27T08:50+00:00
+¿Hice algo incorrectamente? ¿Dónde está mi recarga?,pending_top_up,chat,2026-08-27T12:52+00:00
+No puedo ver la transferencia que hice.,balance_not_updated_after_bank_transfer,chat,2026-08-27T18:57+00:00
+¿Por qué me cobraron una tarifa extra al pagar con tarjeta?,card_payment_fee_charged,email,2026-08-27T20:18+00:00
+¿Dónde voy para activar mi tarjeta?,activate_my_card,phone,2026-08-28T00:34+00:00
+"¿Podrían ofrecerme un descuento, ya que necesito cambiar divisas con frecuencia?",exchange_charge,email,2026-08-28T09:50+00:00
+El dinero que transferí no llegó.,transfer_not_received_by_recipient,email,2026-08-29T20:09+00:00
+Necesito actualizar mi número de teléfono.,edit_personal_details,chat,2026-08-30T06:23+00:00
+Tengo otra tarjeta de EE. UU. ¿Podrás aceptar esa?,supported_cards_and_currencies,phone,2026-08-30T13:02+00:00
+"Ya no quiero esta cuenta, ¿qué debo hacer?",terminate_account,email,2026-08-30T13:08+00:00
+¿Por qué no está funcionando mi tarjeta virtual desechable?,virtual_card_not_working,phone,2026-08-30T14:23+00:00
+¿Qué hago si no puedo acceder a la aplicación?,lost_or_stolen_phone,email,2026-08-31T11:03+00:00
+¿Qué debo hacer si he utilizado todos mis intentos de PIN?,pin_blocked,chat,2026-08-31T13:23+00:00
+No pude transferir dinero a un beneficiario.,beneficiary_not_allowed,web,2026-08-31T18:38+00:00
+"Estoy tratando de hacer una transferencia a otra cuenta, pero siguen siendo rechazadas. He verificado todos los detalles y la información es correcta.",declined_transfer,web,2026-09-01T05:44+00:00
+¿Por qué me están cobrando una tarifa en un pago con tarjeta?,card_payment_fee_charged,web,2026-09-01T23:21+00:00
+¿Cómo puede ser que mi tarjeta ya no funcione?,card_not_working,chat,2026-09-02T01:16+00:00
+"Recientemente, hace unas semanas hubo una transacción realizada en mi cuenta por un vendedor que no reconozco. Estoy muy seguro de que eso no sucedió y me gustaría que lo investigaran para asegurarse.",direct_debit_payment_not_recognised,web,2026-09-02T02:51+00:00
+"He estado esperando que se complete una transferencia pendiente desde hace un tiempo, y no veo ninguna razón por la que haya estado esperando tanto. Sé que tengo los datos de la cuenta correctos, así que ese no es el problema.",pending_transfer,chat,2026-09-02T06:09+00:00
+¿Por qué no está mi reembolso en mi estado de cuenta?,refund_not_showing_up,email,2026-09-02T07:37+00:00
+¿Cuánto cobran por las tasas de cambio?,exchange_charge,web,2026-09-02T09:42+00:00
+¿Dónde puedo encontrar cómo cambiar mi nombre?,edit_personal_details,social,2026-09-02T10:57+00:00
+No puedo hacer compras con mi tarjeta virtual.,virtual_card_not_working,chat,2026-09-02T15:47+00:00
+"Pensé que conocía mi contraseña, pero supongo que estaba equivocado. ¿Qué puedo hacer ahora?",passcode_forgotten,social,2026-09-02T19:23+00:00
+"Un vendedor se puso en contacto conmigo diciendo que mi dinero no les llegó, pero estoy seguro de que fue retirado de mi cuenta. ¿Puedes averiguar cuál es el problema aquí?",reverted_card_payment,chat,2026-09-02T23:41+00:00
+"¡Acabo de tener mi tarjeta rechazada en el cajero automático! Necesito sacar dinero, pero no puedo. ¿Por qué ha sucedido esto?",declined_cash_withdrawal,web,2026-09-03T03:16+00:00
+¿Por qué solo recibí esta cantidad de moneda?,wrong_exchange_rate_for_cash_withdrawal,chat,2026-09-03T21:23+00:00
+¿Cuál es el proceso para transferir dinero a una cuenta?,transfer_into_account,chat,2026-09-04T01:54+00:00
+Veo una tarifa extraña que nunca había visto antes después de hacer una compra por internet desde el extranjero. Tenía la impresión de que las transferencias se podían hacer gratis. No creo que esto parezca justo.,transfer_fee_charged,chat,2026-09-04T05:03+00:00
+"Hola, hoy usé un cajero automático para sacar dinero de mi cuenta, pero la cantidad que me dio no es la cantidad que solicité. ¿Qué debo hacer?",wrong_amount_of_cash_received,chat,2026-09-04T15:03+00:00
+¿Puedo retirar en mi moneda local en un cajero automático? Estoy de vacaciones y no tengo efectivo conmigo. Esto es motivo de un poco de preocupación. ¿Es posible retirar aquí sin cargos adicionales?,wrong_exchange_rate_for_cash_withdrawal,chat,2026-09-04T15:51+00:00
+"Necesito cambiar mis GBP a AUD, ¿cómo lo haría?",exchange_via_app,web,2026-09-04T16:14+00:00
+Necesito ayuda para completar una transferencia. Estoy tratando de comprar un departamento y necesito el dinero para el pago inicial de la hipoteca. Sigo recibiendo un error y la transferencia no se realiza. ¿Qué está pasando aquí?,failed_transfer,social,2026-09-05T00:11+00:00
+Mi recarga no se ha registrado.,pending_top_up,email,2026-09-05T06:57+00:00
+Me gustaría una tarjeta física.,order_physical_card,chat,2026-09-05T14:43+00:00
+"El pago con tarjeta aún está pendiente, ¿por qué es eso?",pending_card_payment,web,2026-09-06T02:55+00:00
+"¿Cuánto dinero puedo retirar sin cargos? Noté un cargo en mi tarjeta, pero no pensé que había alcanzado el límite de lo que podía retirar en un mes.",cash_withdrawal_charge,phone,2026-09-06T05:44+00:00
+¿Cuál es la cantidad máxima de tarjetas desechables permitidas?,disposable_card_limits,web,2026-09-07T05:25+00:00
+Tengo un cargo incorrecto y me gustaría un reembolso.,request_refund,web,2026-09-08T00:25+00:00
+"Necesito cambiar moneda extranjera, ¿me cobrarán?",exchange_charge,chat,2026-09-08T10:32+00:00
+"Por favor, díganme cómo verifico mi identidad.",verify_my_identity,chat,2026-09-09T18:06+00:00
+El retiro de efectivo que hice parece estar incorrecto. El tipo de cambio está mal.,wrong_exchange_rate_for_cash_withdrawal,chat,2026-09-10T04:17+00:00
+"Solicité un reembolso a un comerciante hace un tiempo, y al revisar repetidamente mi estado de cuenta, el comerciante aún no me ha devuelto mi dinero. No sé qué está pasando, ni por qué el dinero está ingresando a mi cuenta; ¿podrías ayudarme, por favor?",refund_not_showing_up,chat,2026-09-10T10:15+00:00
+¿Puedo recargar mi tarjeta con otras tarjetas?,supported_cards_and_currencies,chat,2026-09-10T11:59+00:00
+Veo un cargo de 1L que no reconozco en mi estado de cuenta.,extra_charge_on_statement,phone,2026-09-10T23:29+00:00
+"Hice una recarga, pero mi dinero no aparece. ¿Por qué es eso?",top_up_reverted,web,2026-09-11T08:38+00:00
+"Si no tengo todos mis documentos, ¿pueden aún verificar mi identidad?",verify_my_identity,chat,2026-09-11T11:57+00:00
+¿El recargo automático tiene algún límite?,automatic_top_up,web,2026-09-11T20:10+00:00
