@@ -1,0 +1,61 @@
+# Levanta base de datos (pgvector), API y demo Streamlit: docker compose up --build
+# Requisitos: .env con POSTGRES_PASSWORD, API_KEYS_CLIENT, API_KEYS_REVIEWER, DEMO_API_KEY y
+# el modelo en ./artifacts/model (nlp-tickets train, o nlp-tickets fetch-model con MODEL_URL).
+name: nlp-tickets-es
+
+services:
+  db:
+    image: pgvector/pgvector:0.8.6-pg17
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-nlp_tickets}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Define POSTGRES_PASSWORD en .env}
+      POSTGRES_DB: ${POSTGRES_DB:-nlp_tickets}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "127.0.0.1:55432:5432" # solo local: permite usar la CLI desde el host
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    restart: unless-stopped
+
+  api:
+    build: .
+    image: nlp-tickets-api:0.1.0
+    environment:
+      APP_ENV: development
+      DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-nlp_tickets}:${POSTGRES_PASSWORD:?Define POSTGRES_PASSWORD en .env}@db:5432/${POSTGRES_DB:-nlp_tickets}
+      API_KEYS_CLIENT: ${API_KEYS_CLIENT:?Define API_KEYS_CLIENT en .env}
+      API_KEYS_REVIEWER: ${API_KEYS_REVIEWER:?Define API_KEYS_REVIEWER en .env}
+      CORS_ALLOWED_ORIGINS: ${CORS_ALLOWED_ORIGINS:-http://localhost:8501}
+      RATE_LIMIT_PER_MINUTE: ${RATE_LIMIT_PER_MINUTE:-60}
+      MODEL_URL: ${MODEL_URL:-}
+      MODEL_SHA256: ${MODEL_SHA256:-}
+      SEED_ON_START: "true"
+    volumes:
+      - ./artifacts/model:/app/artifacts/model:ro
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+
+  demo:
+    build: ./demo
+    image: nlp-tickets-demo:0.1.0
+    environment:
+      API_BASE_URL: http://api:8000
+      DEMO_API_KEY: ${DEMO_API_KEY:?Define DEMO_API_KEY en .env (una de API_KEYS_CLIENT)}
+      DEMO_REVIEWER_KEY: ${DEMO_REVIEWER_KEY:-}
+    ports:
+      - "8501:8501"
+    depends_on:
+      api:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  pgdata:

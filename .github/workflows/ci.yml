@@ -1,0 +1,72 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  secrets:
+    name: Escaneo de secretos (gitleaks)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Instalar gitleaks 8.30.1 (SHA-256 verificado)
+        run: |
+          curl -fsSL -o gl.tgz https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_linux_x64.tar.gz
+          echo "551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb  gl.tgz" | sha256sum -c -
+          tar -xzf gl.tgz gitleaks
+      - name: Escanear historial completo
+        run: ./gitleaks git . -c .gitleaks.toml --redact --verbose --exit-code 1
+
+  quality:
+    name: Lint, tipos y tests (unitarios + integración)
+    runs-on: ubuntu-24.04
+    needs: secrets
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
+        with:
+          version: "0.12.19"
+          python-version: "3.12"
+          enable-cache: true
+      - name: Instalar dependencias (runtime + dev, sin PyTorch)
+        run: uv sync --frozen
+      - name: Ruff (lint + formato)
+        run: |
+          uv run ruff check src tests migrations demo
+          uv run ruff format --check src tests migrations demo
+      - name: Mypy (estricto)
+        run: uv run mypy
+      - name: Pytest con cobertura (Testcontainers usa el Docker del runner)
+        run: uv run pytest --cov --cov-report=term-missing
+
+  docker:
+    name: Build de imágenes Docker
+    runs-on: ubuntu-24.04
+    needs: quality
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: API
+        run: docker build --pull -t nlp-tickets-api:ci .
+      - name: Demo
+        run: docker build --pull -t nlp-tickets-demo:ci ./demo
+      - name: La imagen no incluye PyTorch y corre como usuario no root
+        run: |
+          test "$(docker run --rm --entrypoint id nlp-tickets-api:ci -u)" = "10001"
+          docker run --rm --entrypoint python nlp-tickets-api:ci -c "import importlib.util, sys; sys.exit(importlib.util.find_spec('torch') is not None)"

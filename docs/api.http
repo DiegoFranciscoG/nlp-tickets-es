@@ -1,0 +1,81 @@
+### Colección de ejemplos (VS Code REST Client o IntelliJ HTTP Client)
+### Las claves se leen de tu .env local: nunca las escribas aquí.
+@baseUrl = http://localhost:8000
+@clientKey = {{$dotenv API_KEYS_CLIENT}}
+@reviewerKey = {{$dotenv API_KEYS_REVIEWER}}
+
+### Salud (público)
+GET {{baseUrl}}/health
+
+### Clasificar un ticket con explicación y tickets parecidos
+# @name classify
+POST {{baseUrl}}/api/v1/classify
+X-API-Key: {{clientKey}}
+Content-Type: application/json
+
+{
+  "text": "Buenas tardes, me robaron la tarjeta en el centro de Quito y veo dos compras que no reconozco. Mi nombre es Andrea Paredes, celular 099 000 0001.",
+  "channel": "chat",
+  "external_ref": "HD-2026-000123",
+  "explain": true,
+  "include_similar": true,
+  "similar_limit": 3
+}
+
+### Clasificar sin guardar (vista previa)
+POST {{baseUrl}}/api/v1/classify
+X-API-Key: {{clientKey}}
+Content-Type: application/json
+
+{
+  "text": "¿Cuánto tiempo tarda en llegar la tarjeta física a Cuenca?",
+  "channel": "web",
+  "persist": false
+}
+
+### Tickets resueltos parecidos a un texto nuevo
+POST {{baseUrl}}/api/v1/tickets/similar
+X-API-Key: {{clientKey}}
+Content-Type: application/json
+
+{
+  "text": "Hice una transferencia hace dos días y no le llega a mi hermano",
+  "limit": 5
+}
+
+### Tickets parecidos a uno ya guardado
+GET {{baseUrl}}/api/v1/tickets/{{classify.response.body.ticket_id}}/similar?limit=3
+X-API-Key: {{clientKey}}
+
+### Corrección humana (rol reviewer)
+POST {{baseUrl}}/api/v1/feedback
+X-API-Key: {{reviewerKey}}
+Content-Type: application/json
+
+{
+  "prediction_id": "{{classify.response.body.prediction_id}}",
+  "corrected_intent": "compromised_card",
+  "corrected_urgency": "high",
+  "comment": "La clienta confirmó consumos en el exterior"
+}
+
+### Catálogo de categorías, equipos e intenciones (para sincronizar con el helpdesk)
+GET {{baseUrl}}/api/v1/catalog
+X-API-Key: {{clientKey}}
+
+### Modelo activo y sus métricas
+GET {{baseUrl}}/api/v1/model
+X-API-Key: {{clientKey}}
+
+### Error esperado: sin API key -> 401
+GET {{baseUrl}}/api/v1/catalog
+
+### Error esperado: el rol client no puede corregir -> 403
+POST {{baseUrl}}/api/v1/feedback
+X-API-Key: {{clientKey}}
+Content-Type: application/json
+
+{
+  "prediction_id": "{{classify.response.body.prediction_id}}",
+  "corrected_urgency": "low"
+}
