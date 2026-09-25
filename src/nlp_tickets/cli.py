@@ -152,6 +152,15 @@ def _cmd_export_feedback(args: argparse.Namespace) -> None:
     log.info("%d correcciones exportadas a %s", len(rows), out)
 
 
+def _cmd_update_readme(_: argparse.Namespace) -> None:
+    from nlp_tickets.ml.summary import update_readme  # noqa: PLC0415
+
+    readme = Path("README.md")
+    report = json.loads(REPORT.read_text(encoding="utf-8"))
+    readme.write_text(update_readme(readme.read_text(encoding="utf-8"), report), encoding="utf-8")
+    log.info("README actualizado con las métricas de %s", report["version"])
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="nlp-tickets", description=__doc__)
     sub = parser.add_subparsers(dest="command", required=True)
@@ -190,6 +199,9 @@ def build_parser() -> argparse.ArgumentParser:
     export.add_argument("--out", default="data/processed/feedback.parquet")
     export.add_argument("--max-rows", type=int, default=2000)
     export.set_defaults(func=_cmd_export_feedback)
+    sub.add_parser(
+        "update-readme", help="inserta las métricas de reports/metrics.json en el README"
+    ).set_defaults(func=_cmd_update_readme)
     return parser
 
 
