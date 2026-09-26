@@ -11,6 +11,7 @@ from typing import Any
 
 import requests
 import streamlit as st
+from auth import Account, LoginGuard, Role, authenticate, build_accounts
 from examples import EXAMPLES
 
 TIMEOUT_SECONDS = 60  # Render free despierta en ~1 minuto
@@ -41,6 +42,45 @@ def setting(name: str, default: str = "") -> str:
 API = setting("API_BASE_URL", "http://localhost:8000").rstrip("/")
 CLIENT_KEY = setting("DEMO_API_KEY")
 REVIEWER_KEY = setting("DEMO_REVIEWER_KEY")
+ACCOUNTS = build_accounts(
+    {
+        name: setting(name)
+        for name in ("DEMO_USER", "DEMO_PASSWORD_HASH", "REVIEWER_USER", "REVIEWER_PASSWORD_HASH")
+    }
+)
+
+
+@st.cache_resource
+def login_guards() -> dict[str, LoginGuard]:
+    """Un contador de intentos por usuario, compartido entre sesiones del proceso."""
+    return {}
+
+
+def login_view() -> None:
+    st.subheader("Iniciar sesión")
+    with st.form("login"):
+        username = st.text_input("Usuario", max_chars=64)
+        password = st.text_input("Contraseña", type="password", max_chars=128)
+        submitted = st.form_submit_button("Entrar", type="primary")
+    if not submitted:
+        return
+    guard = login_guards().setdefault(username.strip().lower(), LoginGuard())
+    if wait := guard.locked_for():
+        st.error(f"Demasiados intentos fallidos. Espera {wait} s.")
+        return
+    account = authenticate(ACCOUNTS, username, password)
+    if account is None:
+        guard.register_failure()
+        st.error("Usuario o contraseña incorrectos.")
+        return
+    guard.reset()
+    st.session_state["account"] = account
+    st.rerun()
+
+
+def current_account() -> Account | None:
+    account = st.session_state.get("account")
+    return account if isinstance(account, Account) else None
 
 
 def call(method: str, path: str, key: str, payload: dict[str, Any] | None = None) -> Any:
@@ -176,6 +216,10 @@ def classify_tab() -> None:
 
 def review_tab() -> None:
     result = st.session_state.get("result")
+    account = current_account()
+    if account is None or account.role is not Role.REVIEWER:
+        st.info("Solo las cuentas con rol revisor pueden corregir predicciones.")
+        return
     if not REVIEWER_KEY:
         st.info("La revisión humana está deshabilitada en esta demo (falta DEMO_REVIEWER_KEY).")
         return
@@ -268,9 +312,19 @@ def main() -> None:
         "Banco ficticio · los datos que escribas se anonimizan antes de guardarse. No ingreses "
         "datos personales reales."
     )
-    if not CLIENT_KEY:
-        st.error("Configura DEMO_API_KEY (st.secrets o variable de entorno).")
+    if not CLIENT_KEY or not ACCOUNTS:
+        st.error("Configura DEMO_API_KEY y las cuentas de la demo (st.secrets o entorno).")
         return
+    account = current_account()
+    if account is None:
+        login_view()
+        return
+    with st.sidebar:
+        role = "revisor" if account.role is Role.REVIEWER else "cliente"
+        st.markdown(f"Sesión: **{account.username}** ({role})")
+        if st.button("Cerrar sesión"):
+            st.session_state.clear()
+            st.rerun()
     tab_classify, tab_review, tab_metrics = st.tabs(["Clasificar", "Revisión humana", "Métricas"])
     with tab_classify:
         classify_tab()
