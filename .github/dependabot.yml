@@ -19,7 +19,15 @@ updates:
     directory: /
     schedule:
       interval: weekly
+    # El proyecto fija Python 3.12 (requires-python): solo parches de 3.12.x.
+    ignore:
+      - dependency-name: python
+        update-types: ["version-update:semver-major", "version-update:semver-minor"]
   - package-ecosystem: docker
     directory: /demo
     schedule:
       interval: weekly
+    # El proyecto fija Python 3.12 (requires-python): solo parches de 3.12.x.
+    ignore:
+      - dependency-name: python
+        update-types: ["version-update:semver-major", "version-update:semver-minor"]
