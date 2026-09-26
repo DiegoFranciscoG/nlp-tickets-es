@@ -95,6 +95,13 @@ plugins = ["pydantic.mypy"]
 module = ["onnxruntime.*", "pgvector.*", "sklearn.*", "joblib.*", "mlflow.*", "matplotlib.*", "transformers.*", "sentence_transformers.*", "huggingface_hub.*", "testcontainers.*", "torch.*", "pandas.*", "pyarrow.*", "scipy.*"]
 ignore_missing_imports = true
 
+# Los módulos de entrenamiento importan PyTorch, que no se instala en CI ni en la imagen de la API.
+[[tool.mypy.overrides]]
+module = ["nlp_tickets.ml.train_transformer", "nlp_tickets.ml.export_onnx"]
+disallow_subclassing_any = false
+disallow_untyped_decorators = false
+warn_unused_ignores = false
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-ra --strict-markers"

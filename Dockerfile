@@ -28,7 +28,7 @@ COPY alembic.ini ./
 COPY migrations ./migrations
 COPY data/catalog ./data/catalog
 COPY data/seed ./data/seed
-COPY reports/metrics.json ./reports/metrics.json
+COPY reports ./reports
 COPY --chmod=0755 docker/entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN mkdir -p /app/artifacts/model && chown -R app:app /app/artifacts
 USER app
