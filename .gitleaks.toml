@@ -40,4 +40,3 @@ regex = '''(?i)name="[^"]*password[^"]*"\s+value="([^"$]{3,})"'''
 secretGroup = 1
 path = '''(?i)\.(xml|bak)$'''
 keywords = ["password"]
-

@@ -112,6 +112,7 @@ def to_metric_items(metrics: list[ModelMetric]) -> list[ModelMetricItem]:
             accuracy=num(m.accuracy),
             ece=num(m.ece),
             coverage=num(m.coverage),
+            selective_accuracy=num(m.selective_accuracy),
         )
         for m in metrics
     ]

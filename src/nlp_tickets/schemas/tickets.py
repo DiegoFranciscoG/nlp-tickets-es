@@ -171,6 +171,7 @@ class ModelMetricItem(BaseModel):
     accuracy: float | None
     ece: float | None
     coverage: float | None
+    selective_accuracy: float | None
 
 
 class ModelInfoResponse(BaseModel):

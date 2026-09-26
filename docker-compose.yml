@@ -37,7 +37,7 @@ services:
     volumes:
       - ./artifacts/model:/app/artifacts/model:ro
     ports:
-      - "8000:8000"
+      - "127.0.0.1:${API_PORT:-8000}:8000"
     depends_on:
       db:
         condition: service_healthy
@@ -55,7 +55,7 @@ services:
       REVIEWER_USER: ${REVIEWER_USER:-revisor}
       REVIEWER_PASSWORD_HASH: ${REVIEWER_PASSWORD_HASH:?Define REVIEWER_PASSWORD_HASH (python demo/hash_password.py)}
     ports:
-      - "8501:8501"
+      - "127.0.0.1:${DEMO_PORT:-8501}:8501"
     depends_on:
       api:
         condition: service_healthy

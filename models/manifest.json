@@ -1,0 +1,48 @@
+{
+  "name": "minilm-multitask",
+  "version": "2026.09.25-7a9c6964",
+  "bundle": "nlp-tickets-model-2026.09.25-7a9c6964.zip",
+  "bundle_sha256": "2c64eda54be7a30bbf97487622aee671bbf28b693be1c682f7527eea07ec965e",
+  "artifacts": [
+    {
+      "file": "model.onnx",
+      "sha256": "04d34ce2706211ac9c0ef5c259462ddd97da2605066304303beee5a6694e936f",
+      "bytes": 118141318
+    },
+    {
+      "file": "tokenizer.json",
+      "sha256": "abe9726b02fea865ca71b5b97cd26e57cf6623ac637c24cb85e701bfeacdfad7",
+      "bytes": 17082997
+    },
+    {
+      "file": "model_meta.json",
+      "sha256": "50b0fad8c0989623d327515136ea8b86652b2f52912f48c86def6d9b8222dc94",
+      "bytes": 3133
+    }
+  ],
+  "size_mb": 118.1,
+  "split_fingerprint": "7a9c6964c0c8dddc636741e35b69ab94d95c03daa79faa3cc20f4951402a67f8",
+  "test_macro_f1": {
+    "tfidf_logreg": {
+      "intent": 0.8875,
+      "category": 0.959,
+      "team": 0.9691,
+      "urgency": 0.9543,
+      "sentiment": 0.6653
+    },
+    "embeddings_logreg": {
+      "intent": 0.8853,
+      "category": 0.9541,
+      "team": 0.965,
+      "urgency": 0.9527
+    },
+    "minilm_multitask_onnx_int8": {
+      "intent": 0.9014,
+      "category": 0.97,
+      "team": 0.9772,
+      "urgency": 0.9675,
+      "sentiment": 0.719
+    }
+  },
+  "confidence_threshold": 0.748
+}

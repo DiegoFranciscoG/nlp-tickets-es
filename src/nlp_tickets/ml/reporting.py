@@ -31,7 +31,7 @@ BLUES = LinearSegmentedColormap.from_list(
 
 def _style(ax: Axes, title: str) -> None:
     ax.set_facecolor(SURFACE)
-    ax.set_title(title, loc="left", color=TEXT, fontsize=12, fontweight="semibold", pad=12)
+    ax.set_title(title, loc="left", color=TEXT, fontsize=12, fontweight="bold", pad=12)
     for spine in ("top", "right"):
         ax.spines[spine].set_visible(False)
     for spine in ("left", "bottom"):
@@ -52,30 +52,44 @@ def _save(fig: Figure, path: Path) -> None:
 def plot_model_comparison(
     tasks: Sequence[str], scores: dict[str, Sequence[float]], path: Path, title: str
 ) -> None:
-    """Barras agrupadas de macro-F1 por tarea y modelo (máximo 3 modelos)."""
-    fig, ax = plt.subplots(figsize=(9, 4.2))
-    width = 0.8 / len(scores)
-    x = np.arange(len(tasks))
-    lowest = float(np.nanmin([v for values in scores.values() for v in values]))
+    """Gráfico de puntos por tarea y modelo (máximo 3 modelos).
+
+    Se usan puntos y no barras porque las diferencias son de centésimas: un eje recortado es
+    legítimo para posiciones, pero exageraría las diferencias si las marcas fueran barras.
+    """
+    fig, ax = plt.subplots(figsize=(9, 4.4))
+    y = np.arange(len(tasks))[::-1]
+    offsets = np.linspace(0.18, -0.18, len(scores))
+    values_all = [v for values in scores.values() for v in values if not np.isnan(v)]
     for i, (model, values) in enumerate(scores.items()):
-        offset = (i - (len(scores) - 1) / 2) * width
-        bars = ax.bar(
-            x + offset,
+        ax.scatter(
             values,
-            width * 0.92,
+            y + offsets[i],
+            s=70,
             color=SERIES[i],
             label=model,
-            edgecolor=SURFACE,
-            linewidth=1,
+            zorder=3,
+            edgecolors=SURFACE,
+            linewidths=1.5,
         )
         if i == len(scores) - 1:  # solo el modelo final lleva etiqueta directa
-            ax.bar_label(bars, fmt="%.3f", fontsize=8, color=TEXT, padding=2)
-    ax.set_xticks(x, tasks)
-    ax.set_ylim(max(0.0, lowest - 0.1), 1.0)
-    ax.set_ylabel("macro-F1 (prueba)")
-    ax.grid(axis="y", color=GRID, linewidth=0.8)
+            for value, pos in zip(values, y + offsets[i], strict=True):
+                if not np.isnan(value):
+                    ax.annotate(
+                        f"{value:.3f}",
+                        (value, pos),
+                        textcoords="offset points",
+                        xytext=(8, 0),
+                        va="center",
+                        fontsize=8,
+                        color=TEXT,
+                    )
+    ax.set_yticks(y, tasks)
+    ax.set_xlim(max(0.0, min(values_all) - 0.03), 1.0)
+    ax.set_xlabel("macro-F1 (prueba)")
+    ax.grid(axis="x", color=GRID, linewidth=0.8)
     ax.set_axisbelow(True)
-    ax.legend(frameon=False, fontsize=9, labelcolor=TEXT_SECONDARY, loc="lower right")
+    ax.legend(frameon=False, fontsize=9, labelcolor=TEXT_SECONDARY, loc="upper left")
     _style(ax, title)
     _save(fig, path)
 

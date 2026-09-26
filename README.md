@@ -9,7 +9,13 @@ Clasifica tickets de soporte en español (intención, categoría, urgencia y sen
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-17%20%2B%20pgvector-336791)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
-**Demo:** _pendiente de publicar (Streamlit Community Cloud)_ · **API:** _pendiente (Render)_ · La demo no requiere usuario; las API keys viven solo en el servidor.
+**Demo:** _pendiente de publicar (Streamlit Community Cloud)_ · **API:** _pendiente (Render)_ · **Usuario de prueba:** `demo` (rol cliente, sin permiso para corregir); la contraseña se publica junto con la demo. Las API keys viven solo en el servidor.
+
+![Demo: inicio de sesión, clasificación con anonimización, explicación, tickets parecidos y métricas](docs/img/demo.gif)
+
+| Revisión humana por baja confianza y regla de urgencia | Métricas del modelo desplegado |
+|---|---|
+| ![Caso enviado a revisión humana](docs/img/demo-revision-humana.png) | ![Métricas en la demo](docs/img/demo-metricas.png) |
 
 ## Problema que resuelve
 En una mesa de ayuda bancaria, cada ticket mal enrutado rebota entre equipos y retrasa los casos urgentes (tarjetas robadas, consumos no reconocidos). Clasificar a mano no escala, y automatizar sin control choca con la **LOPDP de Ecuador**: exige minimizar los datos personales (art. 10) y protege frente a decisiones solo automatizadas (art. 20). Este servicio enruta automáticamente lo que puede predecir con fiabilidad calibrada, manda el resto a una persona y guarda solo texto anonimizado. Está pensado para integrarse con el helpdesk **P34**.
@@ -134,6 +140,40 @@ Swagger: `http://localhost:8000/docs` · Ejemplos: [docs/api.http](docs/api.http
 | GET | `/api/v1/model` | client | Versión activa, umbral y métricas |
 
 <!-- METRICS:START -->
+## Resultados
+Partición oficial de prueba de BANKING77-ES-LA: **3 080 tickets**, nunca usados para elegir hiperparámetros. Todos los modelos usan la misma partición y semilla (hash `7a9c6964c0c8`). Entrenamiento 8 577 · validación 953. Versión `2026.09.25-7a9c6964`.
+
+| Macro-F1 en prueba | TF-IDF + reg. logística | Embeddings congelados + RL | **MiniLM fine-tuning (ONNX INT8)** |
+|---|---:|---:|---:|
+| Intención (77 clases) | 0.887 | 0.885 | 0.901 |
+| Categoría (9) | 0.959 | 0.954 | 0.970 |
+| Equipo destino (6) | 0.969 | 0.965 | 0.977 |
+| Urgencia (3) | 0.954 | 0.953 | 0.968 |
+| Sentimiento (3) | 0.665 | — | 0.719 |
+
+**Diferencia frente a TF-IDF** (bootstrap pareado, 1 000 réplicas, IC 95 %):
+
+- Intención: **+0.014** [+0.004, +0.024]
+- Equipo: **+0.008** [+0.001, +0.015]
+- Sentimiento: **+0.054** [+0.040, +0.066]
+
+| Enrutamiento y revisión humana | TF-IDF + RL | MiniLM (ONNX INT8) |
+|---|---:|---:|
+| Umbral de confianza del equipo (elegido en validación para 99 % de exactitud) | 0.818 | 0.748 |
+| Tickets enrutados automáticamente (cobertura) | 93.5 % | 97.2 % |
+| Exactitud de lo enrutado automáticamente | 99.2 % | 99.1 % |
+| Frases fuera de dominio (MASSIVE) enviadas a revisión humana | 91.2 % | 86.4 % |
+| ECE de intención (sin calibrar → calibrado) | 0.100 → 0.023 | 0.016 → 0.016 |
+
+Artefacto desplegado: ONNX INT8 de **118 MB** (FP32: 470 MB). Coincidencia de predicciones FP32/INT8: 98.8 %. Latencia por ticket en CPU local: p50 5.2 ms · p95 9.6 ms.
+
+![Comparación de macro-F1](reports/figures/comparison_macro_f1.png)
+
+| Equipo destino | Calibración |
+|---|---|
+| ![Matriz de confusión por equipo](reports/figures/confusion_team.png) | ![Diagrama de fiabilidad](reports/figures/reliability_intent.png) |
+
+Métricas completas: [reports/metrics.json](reports/metrics.json) · Ficha del modelo: [docs/model-card.md](docs/model-card.md).
 <!-- METRICS:END -->
 
 ## Tests y cobertura
@@ -141,6 +181,10 @@ Swagger: `http://localhost:8000/docs` · Ejemplos: [docs/api.http](docs/api.http
 uv run pytest --cov   # unitarios + integración (Testcontainers con pgvector real)
 ```
 <!-- TESTS:START -->
+- **Unitarios:** anonimizador (cédula, RUC, teléfonos, tarjetas, nombres, idempotencia), validadores, catálogo, métricas, calibración, umbral, partición sin fuga, líneas base, reglas de urgencia, política de decisión, API keys, *rate limiting*, descarga verificada del modelo, login de la demo y generador del README.
+- **Integración (Testcontainers + PostgreSQL 17 + pgvector):** migraciones idénticas a los modelos ORM, flujo completo de la API (401/403/413/422/429, CORS, cabeceras, anonimización persistida, búsqueda semántica, retroalimentación y exportación) y registro de versiones de modelo.
+- **Modelo real:** 5 pruebas sobre el artefacto ONNX (se omiten en CI si no está descargado).
+- **192 tests** (187 en CI + 5 del modelo real). **Cobertura:** 94,5 % en CI y 95,8 % con el modelo descargado (mínimo exigido 70 %). CI: gitleaks, ruff, mypy estricto, pytest y build de las imágenes Docker.
 <!-- TESTS:END -->
 
 ## Despliegue
@@ -163,6 +207,7 @@ Todo gratis: **Neon** (PostgreSQL + pgvector), **Render** (API Docker, 0,1 CPU /
 - **Evaluar el ONNX INT8** y no el modelo en PyTorch: las métricas publicadas son las del artefacto que se despliega (la paridad FP32/INT8 está en el reporte).
 
 ## Roadmap
+- [ ] Detector de fuera de dominio por similitud con los tickets conocidos (pgvector). Hoy el umbral envía a revisión el 86 % de las frases ajenas al banco, no todas ([ejemplos reales](docs/datos-prueba.md)).
 - [ ] Etiquetar 300 tickets reales del dominio (con la propia herramienta) para medir el sentimiento fuera de Reddit.
 - [ ] Recortar el vocabulario del tokenizador a español (modelo ~4 veces más pequeño).
 - [ ] Rate limiting distribuido (Redis) si la API escala a varias réplicas.
