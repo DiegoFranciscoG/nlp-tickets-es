@@ -2,7 +2,7 @@
 # Imagen de la API: sin PyTorch (inferencia con ONNX Runtime), usuario no root.
 FROM ghcr.io/astral-sh/uv:0.12.19 AS uv
 
-FROM python:3.12.14-slim-bookworm AS builder
+FROM python:3.14.7-slim-bookworm AS builder
 ENV UV_COMPILE_BYTECODE=1 \
     UV_LINK_MODE=copy \
     UV_PYTHON_DOWNLOADS=never \
@@ -14,7 +14,7 @@ RUN uv sync --frozen --no-default-groups --no-install-project
 COPY src ./src
 RUN uv sync --frozen --no-default-groups --no-editable
 
-FROM python:3.12.14-slim-bookworm AS runtime
+FROM python:3.14.7-slim-bookworm AS runtime
 RUN groupadd --system --gid 10001 app \
     && useradd --system --uid 10001 --gid app --home-dir /app --shell /usr/sbin/nologin app
 WORKDIR /app
