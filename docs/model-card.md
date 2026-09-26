@@ -23,12 +23,24 @@ Estructura según Mitchell et al. (2019), *Model Cards for Model Reporting*, y l
 Antes de entrenar se eliminaron 289 duplicados y **184 frases de entrenamiento que también estaban en prueba**. Todo el texto pasa por el mismo anonimizador que usa la API.
 
 ## Métricas
-Todas se calculan sobre el **artefacto ONNX INT8 desplegado**, en la partición oficial de prueba, y se comparan con la línea base TF-IDF + regresión logística entrenada con la misma partición y semilla. Las cifras están en la sección **Resultados** del [README](../README.md) y en `reports/metrics.json`:
+Todas se calculan sobre el **artefacto ONNX INT8 desplegado**, en la partición oficial de prueba, y se comparan con la línea base TF-IDF + regresión logística entrenada con la misma partición y semilla. Las cifras están en la sección **Resultados** del [README](../README.md) y en [reports/metrics.json](../reports/metrics.json):
 - macro-F1 y exactitud por tarea (intención, categoría, equipo, urgencia, sentimiento);
 - ECE antes y después de calibrar, y puntuación de Brier;
 - cobertura y exactitud del enrutamiento automático con el umbral elegido en validación;
 - porcentaje de frases fuera de dominio que se envían a revisión humana;
 - diferencia con la línea base e intervalo de confianza del 95 % (bootstrap pareado).
+
+### Resumen (prueba oficial, versión `2026.09.25-7a9c6964`)
+| Tarea | Macro-F1 modelo | Macro-F1 TF-IDF | Diferencia [IC 95 %] |
+|---|---:|---:|---|
+| Intención (77) | 0,901 | 0,887 | +0.014 [+0.004, +0.024] |
+| Equipo (6) | 0,977 | 0,969 | +0.008 [+0.001, +0.015] |
+| Sentimiento (3) | 0,719 | 0,665 | +0.054 [+0.040, +0.066] |
+
+- **Enrutamiento automático:** 97,2 % de los tickets con 99,1 % de exactitud (umbral 0.748 sobre la probabilidad del equipo; línea base: 93,5 %).
+- **Calibración:** el transformer ya estaba bien calibrado (ECE 0,016, T = 0.91); el *temperature scaling* no lo mejoró en prueba (0,016). En TF-IDF sí fue clave: ECE 0,100 → 0,023.
+- **Cuantización INT8:** 98,8 % de coincidencia con FP32; la macro-F1 de intención baja de 0,905 a 0,901 a cambio de un modelo 4 veces más pequeño (118 MB frente a 470 MB).
+- **Fuera de dominio:** 86,4 % de las frases de MASSIVE va a revisión humana. La línea base detiene más (91,2 %), porque el transformer se muestra más seguro con textos ajenos al banco.
 
 ## Limitaciones conocidas
 - **Etiquetas ruidosas:** BANKING77 tiene errores y solapamientos de etiquetas documentados (Ying & Thomas, 2022), por ejemplo entre `pending_top_up` y `top_up_failed`.
@@ -37,6 +49,7 @@ Todas se calculan sobre el **artefacto ONNX INT8 desplegado**, en la partición 
 - **Sentimiento fuera de dominio:** GoEmotions son comentarios de Reddit traducidos automáticamente y sin revisión; su rendimiento en tickets bancarios **no está medido**.
 - **Urgencia derivada de la intención:** la urgencia base es una política del catálogo (SUPUESTO 1), no una etiqueta humana por ticket. Las reglas de escalamiento cubren solo señales explícitas.
 - **Anonimización por reglas:** detecta identificadores con formato (cédula, RUC, teléfono, tarjeta, correo), pero no todos los nombres propios ni direcciones.
+- **Fuera de dominio:** el umbral de confianza no es un detector de temas ajenos; alrededor del 14 % de las frases no bancarias se enrutan solas (ejemplo real en [datos-prueba.md](datos-prueba.md)).
 - **Longitud:** con 64 tokens se trunca el final de los tickets largos.
 
 ## Sesgos y riesgos

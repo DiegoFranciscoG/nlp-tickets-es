@@ -48,7 +48,7 @@ EXAMPLES: dict[str, dict[str, str]] = {
         "channel": "email",
         "text": "Gracias, el reembolso ya apareció en mi estado de cuenta. ¡Excelente servicio!",
     },
-    "Fuera de dominio (revisión humana)": {
+    "Fuera de dominio (limitación conocida)": {
         "channel": "chat",
         "text": "¿Me recomiendan una receta de encebollado para el domingo?",
     },

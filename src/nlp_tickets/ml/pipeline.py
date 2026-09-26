@@ -454,8 +454,7 @@ def write_figures(reports_dir: Path, data: PreparedData, models: dict[str, Model
             ),
             [namer(c) for c in codes],
             figures / f"confusion_{task}.png",
-            f"{'Equipo destino' if task == 'team' else 'Categoría'}: matriz de confusión "
-            "(recall por fila)",
+            f"{'Equipo destino' if task == 'team' else 'Categoría'}: recall por fila",
         )
     if final.test_logits is None:
         raise ValueError("faltan los logits de prueba del modelo final")
@@ -493,10 +492,14 @@ def write_manifest(
         "version": version,
         "bundle": bundle.name,
         "bundle_sha256": sha256_file(bundle),
-        "files": {
-            name: sha256_file(model_dir / name)
+        "artifacts": [
+            {
+                "file": name,
+                "sha256": sha256_file(model_dir / name),
+                "bytes": (model_dir / name).stat().st_size,
+            }
             for name in ("model.onnx", "tokenizer.json", META_FILE)
-        },
+        ],
         "size_mb": report["parity_fp32_vs_int8"]["onnx_int8_mb"],
         "split_fingerprint": fingerprint,
         "test_macro_f1": {

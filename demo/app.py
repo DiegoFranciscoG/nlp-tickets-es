@@ -110,29 +110,26 @@ def show_result(result: dict[str, Any]) -> None:
         reasons = "; ".join(REASONS.get(r, r) for r in result["review_reasons"])
         st.warning(f"👤 Requiere revisión humana: {reasons}")
 
-    col1, col2, col3, col4 = st.columns(4)
-    col1.metric(
-        "Categoría",
-        result["category"]["name"],
-        f"{result['category']['score']:.0%}",
-        delta_color="off",
-    )
-    col2.metric(
-        "Equipo", result["team"]["name"], f"{result['team']['score']:.0%}", delta_color="off"
-    )
     urgency = result["urgency"]
-    col3.metric(
-        "Urgencia",
-        URGENCY[urgency["code"]],
-        "escalada por regla" if urgency["escalated_by_rule"] else None,
-        delta_color="off",
+    cards = (
+        ("Categoría", result["category"]["name"], f"{result['category']['score']:.0%}"),
+        ("Equipo destino", result["team"]["name"], f"{result['team']['score']:.0%}"),
+        (
+            "Urgencia",
+            URGENCY[urgency["code"]],
+            "escalada por regla" if urgency["escalated_by_rule"] else f"{urgency['score']:.0%}",
+        ),
+        (
+            "Sentimiento",
+            SENTIMENT[result["sentiment"]["code"]],
+            f"{result['sentiment']['score']:.0%}",
+        ),
     )
-    col4.metric(
-        "Sentimiento",
-        SENTIMENT[result["sentiment"]["code"]],
-        f"{result['sentiment']['score']:.0%}",
-        delta_color="off",
-    )
+    for column, (label, value, detail) in zip(st.columns(4), cards, strict=True):
+        with column:
+            st.caption(label)
+            st.markdown(f"#### {value}")
+            st.caption(detail)
 
     st.caption(
         f"Intención: **{result['intent']['name']}** ({result['intent']['score']:.0%}) · "
@@ -279,26 +276,36 @@ def metrics_tab() -> None:
         f"Modelo **{info['name']}** versión `{info['version']}` · umbral "
         f"{info['confidence_threshold']:.3f} · entrenado {info['trained_at'][:10]}"
     )
-    names = {
-        "intent": "Intención (77)",
+    order = {
+        "intent": "Intención (77 clases)",
         "category": "Categoría (9)",
-        "team": "Equipo (6)",
+        "team": "Equipo destino (6)",
         "urgency": "Urgencia (3)",
         "sentiment": "Sentimiento (3)",
-        "ood": "Fuera de dominio",
     }
+    by_task = {m["task"]: m for m in info["metrics"]}
     rows = [
         {
-            "tarea": names.get(m["task"], m["task"]),
-            "partición": m["split"],
-            "macro-F1": m["macro_f1"],
-            "exactitud": m["accuracy"],
-            "ECE": m["ece"],
-            "cobertura automática": m["coverage"],
+            "tarea": label,
+            "macro-F1": f"{by_task[task]['macro_f1']:.3f}",
+            "exactitud": f"{by_task[task]['accuracy']:.1%}",
+            "ECE (calibración)": f"{by_task[task]['ece']:.3f}",
         }
-        for m in info["metrics"]
+        for task, label in order.items()
+        if task in by_task
     ]
     st.dataframe(rows, hide_index=True, width="stretch")
+    team, ood = by_task.get("team"), by_task.get("ood")
+    if team and team.get("coverage") is not None:
+        st.markdown(
+            f"**Enrutamiento automático:** {team['coverage']:.1%} de los tickets de prueba, con "
+            f"{team['selective_accuracy']:.1%} de exactitud; el resto va a revisión humana."
+        )
+    if ood and ood.get("coverage") is not None:
+        st.markdown(
+            f"**Fuera de dominio (MASSIVE):** {1 - ood['coverage']:.1%} de las frases se envía a "
+            "revisión humana."
+        )
     st.caption(
         "Métricas del artefacto ONNX INT8 desplegado en la partición oficial de prueba. La "
         "comparación completa con la línea base está en el README."
