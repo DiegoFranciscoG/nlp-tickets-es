@@ -224,4 +224,4 @@ Todo gratis: **Neon** (PostgreSQL + pgvector), **Render** (API Docker, 0,1 CPU /
 - Todas las fuentes, con fecha de consulta: [docs/investigacion.md](docs/investigacion.md) · Ficha del modelo: [docs/model-card.md](docs/model-card.md).
 
 ## Autor
-**Diego Francisco Granda Zhingre** · [GitHub](https://github.com/DiegoFranciscoG) · [LinkedIn](https://www.linkedin.com/in/)
+**Diego Francisco Granda Zhingre** · [GitHub](https://github.com/DiegoFranciscoG) · [LinkedIn](https://www.linkedin.com/in/diego-francisco-g-61b793254/) · [Portafolio](https://diegofranciscog.github.io/)
