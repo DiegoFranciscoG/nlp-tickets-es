@@ -32,7 +32,7 @@ train = [
     "joblib==1.6.0",
     "matplotlib==3.11.2",
     "mlflow==3.16.1",
-    "onnx==1.23.0",
+    "onnx==1.23.1",
     "onnxscript==0.7.2",
     "pandas==3.0.6",
     "pyarrow==25.0.1",
