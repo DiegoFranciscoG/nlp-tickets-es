@@ -12,13 +12,13 @@ dependencies = [
     "alembic==1.20.0",
     "fastapi==0.141.1",
     "numpy==2.5.3",
-    "onnxruntime==1.30.0",
+    "onnxruntime==1.31.0",
     "pgvector==0.5.0",
     "psycopg[binary]==3.3.6",
     "pydantic==2.13.5",
     "pydantic-settings==2.15.0",
     "sqlalchemy==2.1.1",
-    "tokenizers==0.23.2",
+    "tokenizers==0.23.3",
     "uvicorn==0.54.0",
 ]
 
@@ -32,14 +32,14 @@ train = [
     "joblib==1.6.0",
     "matplotlib==3.11.2",
     "mlflow==3.16.1",
-    "onnx==1.23.0",
+    "onnx==1.23.2",
     "onnxscript==0.7.2",
     "pandas==3.0.6",
     "pyarrow==25.0.1",
     "scikit-learn==1.9.1",
     "sentence-transformers==6.1.0",
-    "torch==2.14.0",
-    "transformers==5.17.0",
+    "torch==2.14.1",
+    "transformers==5.19.0",
 ]
 dev = [
     "argon2-cffi==25.1.0",
