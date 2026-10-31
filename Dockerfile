@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1.7
 # Imagen de la API: sin PyTorch (inferencia con ONNX Runtime), usuario no root.
-FROM ghcr.io/astral-sh/uv:0.12.19 AS uv
+FROM ghcr.io/astral-sh/uv:0.13.6 AS uv
 
 FROM python:3.12.14-slim-bookworm AS builder
 ENV UV_COMPILE_BYTECODE=1 \
